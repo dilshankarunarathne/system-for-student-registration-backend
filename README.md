@@ -6,3 +6,4 @@ Uses face recognition for student identification and attendance management.
 Alternatively, fingerprint recognition and student ID barcode scanning can be used for student 
 identification and attendance management.
 
+
