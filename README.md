@@ -9,7 +9,6 @@ The REST API for student registration and attendance management system, final ye
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact Information](#contact-information)
