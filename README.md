@@ -17,7 +17,7 @@ The REST API for student registration and attendance management system.
 
 ## Description
 
-This is the API gateway for student registration and attendance management system. 
+This is the API gateway for student registration and attendance management system.  
 This API is built with Python and FastAPI. 
  
 Lecturers and students can use this system for automating the attendance management process. 
