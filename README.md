@@ -1,6 +1,6 @@
 # A System for Student Registration
 
-The REST API for student registration and attendance management system. 
+The REST API for student registration and attendance management system, final year project. 
 
 
 [![Version](https://img.shields.io/badge/version-0.1-brightgreen.svg)](https://pypi.org/project/ad-topic-recommender/)
