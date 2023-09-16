@@ -1,3 +1,5 @@
+from dao.user_dao import UserDAO
+
 dao = UserDAO(host="localhost", user="root", password="", database="enad")
 try:
     dao.connect()
