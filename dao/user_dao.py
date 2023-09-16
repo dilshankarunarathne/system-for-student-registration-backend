@@ -83,4 +83,18 @@ class UserDAO:
         except mysql.connector.Error as err:
             print(err)
 
-    
+    def is_token_blacklisted(self, token: str) -> bool:
+        """
+        Check if a token exists in the blacklist table
+        """
+        try:
+            cursor = self.cnx.cursor()
+            query = "SELECT COUNT(*) FROM blacklist WHERE token = %s"
+            values = (token,)
+            cursor.execute(query, values)
+            result = cursor.fetchone()[0]
+            cursor.close()
+            return result > 0
+        except mysql.connector.Error as err:
+            print(err)
+            return False
