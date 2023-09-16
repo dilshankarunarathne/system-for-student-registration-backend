@@ -1,6 +1,3 @@
-"""
-    routers for authentication
-"""
 from fastapi import APIRouter
 
 router = APIRouter(
