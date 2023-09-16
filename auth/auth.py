@@ -33,3 +33,5 @@ async def register_user(
     )
     add_new_user(user)
     return user
+
+
