@@ -10,3 +10,6 @@ def user_exists(username: str) -> bool:
     if get_user(username) is None:
         return False
     return True
+
+
+
