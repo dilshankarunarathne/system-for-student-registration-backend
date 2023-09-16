@@ -1,3 +1,4 @@
+from fastapi.security import OAuth2PasswordBearer
 
 """
     authorization function middleware
