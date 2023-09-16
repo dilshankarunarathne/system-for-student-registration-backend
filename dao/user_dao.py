@@ -10,3 +10,6 @@ class UserDAO:
         self.password = password
         self.database = database
         self.cnx = None
+
+
+    
