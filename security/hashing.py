@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from jose import jwt
 from passlib.context import CryptContext
 
-from services.token_service import add_token_to_blacklist
+from services.token_service import add_token_to_blacklist, check_if_token_is_blacklisted
 
 """
     middleware for hashing passwords and creating tokens
