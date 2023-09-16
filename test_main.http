@@ -3,7 +3,7 @@ POST https://ijhttp-examples.jetbrains.com/post
 Content-Type: application/json
 
 {
-  "token": "my-secret-token"
+  "token": 
 }
 
 > {% client.global.set("auth_token", response.body.json.token); %}
