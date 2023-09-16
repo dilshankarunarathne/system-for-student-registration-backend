@@ -17,3 +17,6 @@ def get_next_avail_id() -> int:
     if last_id is None:
         return 1
     return last_id + 1
+
+
+
