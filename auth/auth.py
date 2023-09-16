@@ -28,7 +28,7 @@ async def register_user(
         email: str = Form(...),
         password: str = Form(...),
         is_instructor: bool = Form(...),
-is_adviser=None):
+        is_adviser=None):
     if user_exists(username):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
