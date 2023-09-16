@@ -56,4 +56,4 @@ class UserDAO:
             return None
         return UserInDB(**dict(zip(['id', 'username', 'email', 'is_adviser', 'hashed_password'], row)))
 
-    
+
