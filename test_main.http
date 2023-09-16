@@ -1,11 +1,15 @@
-# Test your FastAPI endpoints
+### Authorization by token, part 1. Retrieve and save token.
+POST https://ijhttp-examples.jetbrains.com/post
+Content-Type: application/json
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+{
+  "token": "my-secret-token"
+}
 
-###
+> {% client.global.set("auth_token", response.body.json.token); %}
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### Authorization by token, part 2. Use token to authorize.
+GET https://ijhttp-examples.jetbrains.com/headers
+Authorization: Bearer {{auth_token}}
 
 ###
