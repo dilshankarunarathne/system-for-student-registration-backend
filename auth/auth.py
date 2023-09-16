@@ -5,6 +5,7 @@ from typing import Annotated
 from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
+from models.user_model import UserInDB
 from security.hashing import get_password_hash
 from services.user_service import user_exists
 
