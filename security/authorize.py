@@ -5,6 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 
 from jose import JWTError
 
+from security.hashing import verify_password
 from services.user_service import get_user
 
 """
