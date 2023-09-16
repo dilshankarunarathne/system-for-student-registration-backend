@@ -60,4 +60,7 @@ async def login_for_access_token(
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-
+@router.post("/logout")
+async def logout(token: str = Depends(oauth2_scheme)):
+    blacklist_token(token)
+    return {"message": "Successfully logged out"}
