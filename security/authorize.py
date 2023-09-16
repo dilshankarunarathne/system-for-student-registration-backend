@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordBearer
 
-from jose import JWTError
+from jose import JWTError, jwt
 
 from security.hashing import verify_password, is_token_blacklisted
 from services.user_service import get_user
