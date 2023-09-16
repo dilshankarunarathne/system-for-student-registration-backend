@@ -1,4 +1,4 @@
-
+from passlib.context import CryptContext
 
 """
     middleware for hashing passwords and creating tokens
