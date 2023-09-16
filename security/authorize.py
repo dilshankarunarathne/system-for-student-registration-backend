@@ -5,6 +5,8 @@ from fastapi.security import OAuth2PasswordBearer
 
 from jose import JWTError
 
+from services.user_service import get_user
+
 """
     authorization function middleware
 """
