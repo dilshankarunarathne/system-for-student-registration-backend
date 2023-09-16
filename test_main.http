@@ -1,15 +1,15 @@
 ### Authorization by token, part 1. Retrieve and save token.
-POST https://ijhttp-examples.jetbrains.com/post
+POST http://127.0.0.1:8000/api/auth/login
 Content-Type: application/json
 
 {
-  "token": 
+  "token": "my-secret-token"
 }
 
 > {% client.global.set("auth_token", response.body.json.token); %}
 
 ### Authorization by token, part 2. Use token to authorize.
-GET https://ijhttp-examples.jetbrains.com/headers
+GET http://127.0.0.1:8000/api/
 Authorization: Bearer {{auth_token}}
 
 ###
