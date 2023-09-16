@@ -6,6 +6,7 @@ from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
 from models.user_model import UserInDB
+from security.authorize import authenticate_user
 from security.hashing import get_password_hash
 from services.user_service import user_exists, get_next_avail_id, add_new_user
 
