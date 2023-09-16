@@ -19,4 +19,5 @@ def get_next_avail_id() -> int:
     return last_id + 1
 
 
-
+def get_user(username: str):
+    return dao.get_user_by_username(username)
