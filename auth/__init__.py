@@ -1,3 +1,5 @@
+from typing import Annotated
+
 from fastapi import HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
