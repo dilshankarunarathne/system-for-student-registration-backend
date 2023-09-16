@@ -82,3 +82,5 @@ class UserDAO:
             cursor.close()
         except mysql.connector.Error as err:
             print(err)
+
+    
