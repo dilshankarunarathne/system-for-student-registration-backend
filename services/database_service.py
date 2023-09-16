@@ -1,4 +1,4 @@
-dao = EnAdDAO(host="localhost", user="root", password="", database="enad")
+dao = UserDAO(host="localhost", user="root", password="", database="enad")
 try:
     dao.connect()
     print("EnAdDB connection successful")
