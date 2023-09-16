@@ -5,6 +5,8 @@ from typing import Annotated
 from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
+from services.user_service import user_exists
+
 """
     routers for authentication
 """
