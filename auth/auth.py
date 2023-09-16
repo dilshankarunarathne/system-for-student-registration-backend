@@ -7,7 +7,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 
 from models.user_model import UserInDB
 from security.hashing import get_password_hash
-from services.user_service import user_exists, get_next_avail_id
+from services.user_service import user_exists, get_next_avail_id, add_new_user
 
 """
     routers for authentication
