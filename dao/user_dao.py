@@ -43,3 +43,5 @@ class UserDAO:
         cursor.execute(add_user, data_user)
         self.cnx.commit()
         cursor.close()
+
+    
