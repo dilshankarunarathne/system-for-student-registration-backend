@@ -1,4 +1,7 @@
 from fastapi import APIRouter
+"""
+    routers for authentication
+"""
 
 router = APIRouter(
     prefix="/api/auth",
