@@ -65,3 +65,18 @@ class UserDAO:
         if row is None:
             return 0
         return row[0]
+
+    def blacklist_token(self, token: str):
+        """
+        Add a token to the blacklist table with the current timestamp
+        """
+        try:
+            cursor = self.cnx.cursor()
+            query = "INSERT INTO blacklist (token, blacklisted_on) VALUES (%s, %s)"
+            timestamp = datetime.now()
+            values = (token, timestamp)
+            cursor.execute(query, values)
+            self.cnx.commit()
+            cursor.close()
+        except mysql.connector.Error as err:
+            print(err)
