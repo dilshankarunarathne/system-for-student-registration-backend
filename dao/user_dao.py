@@ -3,7 +3,7 @@ from datetime import datetime
 import mysql.connector
 from mysql.connector import errorcode
 
-from models.user_model import User
+from models.user_model import User, UserInDB
 
 """
     middleware for accessing the user database and performing CRUD operations on the user table
