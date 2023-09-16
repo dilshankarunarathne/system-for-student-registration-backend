@@ -30,7 +30,6 @@ class UserDAO:
             else:
                 print(err)
 
-
     def disconnect(self):
         if self.cnx is not None:
             self.cnx.close()
