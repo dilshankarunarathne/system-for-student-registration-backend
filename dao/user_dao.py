@@ -56,4 +56,12 @@ class UserDAO:
             return None
         return UserInDB(**dict(zip(['id', 'username', 'email', 'is_adviser', 'hashed_password'], row)))
 
-
+    def get_last_user_id(self) -> int:
+        cursor = self.cnx.cursor()
+        query = "SELECT MAX(id) FROM users"
+        cursor.execute(query)
+        row = cursor.fetchone()
+        cursor.close()
+        if row is None:
+            return 0
+        return row[0]
