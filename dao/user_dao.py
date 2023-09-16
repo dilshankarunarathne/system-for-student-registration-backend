@@ -1,7 +1,9 @@
+import mysql.connector
+from mysql.connector import errorcode
+
 """
     middleware for accessing the user database and performing CRUD operations on the user table
 """
-import mysql
 
 
 class UserDAO:
