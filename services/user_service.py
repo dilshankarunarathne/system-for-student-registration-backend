@@ -1,3 +1,4 @@
+from models.user_model import User
 from services.database_service import dao
 
 
