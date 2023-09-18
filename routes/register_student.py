@@ -24,8 +24,8 @@ async def register_fingerprint(
 ):
     """
     can register a fingerprint for a student, need to provide the student registration number along with it
-    :param fingerprint_data: fingerprint data 
-    :param token:
+    :param fingerprint_data: fingerprint data
+    :param token: oauth2 token
     :return:
     """
     if get_current_user(token) is None:
