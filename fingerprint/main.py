@@ -1,1 +1,2 @@
-def matches_fingerprint(fingerprint1, fingerprint2)
+def matches_fingerprint(fingerprint1, fingerprint2):
+    
