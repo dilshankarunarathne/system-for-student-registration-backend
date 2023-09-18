@@ -11,7 +11,7 @@ router = APIRouter(
 )
 
 
-@router.post()
+@router.post
 async def register_fingerprint(
-        
+
 )
