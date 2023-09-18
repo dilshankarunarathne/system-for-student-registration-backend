@@ -34,4 +34,4 @@ class FingerprintDAO:
         if self.cnx is not None:
             self.cnx.close()
 
-    def add_fingerprint(self):
+    def add_fingerprint(self, fingerprint_data):
