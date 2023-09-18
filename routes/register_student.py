@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
-from security.authorize import oauth2_scheme
+from security.authorize import oauth2_scheme, get_current_user
 from services.fingerprint_service import dao
 
 """
@@ -21,5 +21,5 @@ async def register_fingerprint(
 ):
     if get_current_user(token) is None:
         raise credentials_exception
-    
+
     dao.add_fingerprint()
