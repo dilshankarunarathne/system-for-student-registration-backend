@@ -21,6 +21,7 @@ router = APIRouter(
 ):
 
 
+
 @router.post
 async def mark_by_fingerprint(
         fingerprint_data: UploadFile = File(...),
