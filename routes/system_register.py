@@ -16,4 +16,3 @@ async def register_fingerprint(
 
 ):
     pass  # TODO implement the router
-
