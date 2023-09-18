@@ -1,5 +1,5 @@
 """
-    
+    provides functionality for working with fingerprint data
 """
 
 
