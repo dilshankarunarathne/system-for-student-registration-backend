@@ -1,7 +1,7 @@
+from dao.fingerprint_dao import FingerprintDAO
 """
     middleware services for fingerprint data
 """
-from dao.fingerprint_dao import FingerprintDAO
 
 dao = FingerprintDAO(host="localhost", user="root", password="", database="enad")
 try:
