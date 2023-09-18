@@ -13,7 +13,7 @@ except Exception as e:
     print("User DB connection error:", e)
 
 
-def add_fingerprint_to_db(fingerprint_data):
+def add_fingerprint_to_db(fingerprint_data, student_id):
     dao.add_fingerprint(fingerprint_data, student_id)
 
 
