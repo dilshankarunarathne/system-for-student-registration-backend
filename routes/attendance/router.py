@@ -17,7 +17,7 @@ router = APIRouter(
 
 
 @router.post
-(
+async def (
     fingerprint_data : blob,
     token: str = Depends(oauth2_scheme)
 ):
