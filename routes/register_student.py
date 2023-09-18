@@ -21,6 +21,7 @@ router = APIRouter(
 async def register_student(
 
 ):
+    # TODO implement this
 
 
 @router.post
