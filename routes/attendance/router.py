@@ -30,7 +30,7 @@ async def mark_by_id(
     if get_current_user(token) is None:
         raise credentials_exception
 
-    contents = await fingerprint_data.read()
+    contents = await barcode_data.read()
     nparray = np.fromstring(contents, np.uint8)
 
     # TODO evaluate the fingerprint
