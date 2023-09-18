@@ -2,4 +2,5 @@
     middleware services for fingerprint data
 """
 
-def add_fingerprint_to_db()
+def add_fingerprint_to_db(fingerprint_data):
+    
