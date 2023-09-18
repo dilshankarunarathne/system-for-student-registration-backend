@@ -2,6 +2,13 @@
     middleware services for fingerprint data
 """
 
+dao = UserDAO(host="localhost", user="root", password="", database="enad")
+try:
+    dao.connect()
+    print("EnAdDB connection successful")
+except Exception as e:
+    print("User DB connection error:", e)
+
 
 def add_fingerprint_to_db(fingerprint_data):
     # TODO add fingerprint data to the database
@@ -14,4 +21,4 @@ def check_fingerprint(fingerprint_data):
 
 
 def check_against_all(fingerprint_data):
-    fingerprints = 
+    fingerprints =
