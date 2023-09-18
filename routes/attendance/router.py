@@ -31,6 +31,7 @@ async def mark_by_fingerprint(
         raise credentials_exception
 
     contents = await fingerprint_data.read()
+    nparray = np.fromstring(contents, np.uint8)
 
 
 @router.post("/facerec")
