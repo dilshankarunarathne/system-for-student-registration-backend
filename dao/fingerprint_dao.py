@@ -26,4 +26,3 @@ class FingerprintDAO:
                 print("Database does not exist")
             else:
                 print(err)
-                
