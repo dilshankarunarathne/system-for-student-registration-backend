@@ -30,7 +30,7 @@ async def mark_by_fingerprint(
     if get_current_user(token) is None:
         raise credentials_exception
 
-    contents = await 
+    contents = await fingerprint_data.read()
 
 
 @router.post("/facerec")
