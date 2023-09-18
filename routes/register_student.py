@@ -19,7 +19,11 @@ router = APIRouter(
 
 @router.post
 async def register_student(
-
+        username: str = Form(...),
+        email: str = Form(...),
+        password: str = Form(...),
+        is_instructor: bool = Form(...),
+        is_adviser=None
 ):
     # TODO implement this
     pass
