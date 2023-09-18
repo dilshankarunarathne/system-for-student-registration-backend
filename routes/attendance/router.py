@@ -22,7 +22,7 @@ async def mark_by_face(
         token: str = Depends(oauth2_scheme)
 ):
     """
-    provides the ability to 
+    provides the ability to mark the attendance of
     :param image: image of the face
     :param token: oauth2 token
     :return: redirect to /attendance
