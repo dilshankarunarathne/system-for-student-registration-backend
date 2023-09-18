@@ -4,3 +4,4 @@
 
 def add_fingerprint_to_db(fingerprint_data):
     # TODO add fingerprint data to the database
+    pass
