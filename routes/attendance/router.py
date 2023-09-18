@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from fastapi import APIRouter, UploadFile, File, Depends
+from starlette.responses import RedirectResponse
 
 from security.authorize import oauth2_scheme, get_current_user, credentials_exception
 
