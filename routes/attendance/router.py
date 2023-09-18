@@ -12,6 +12,7 @@ router = APIRouter(
     responses={404: {"description": "The requested page was not found"}},
 )
 
+
 @router.post("/facerec")
 def mark_by_face(
         image: UploadFile = File(...),
