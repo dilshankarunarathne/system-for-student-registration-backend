@@ -27,6 +27,7 @@ async def mark_by_fingerprint(
     :param token: oauth2 token
     :return: redirect to /attendance
     """
+    
 
 
 @router.post("/facerec")
