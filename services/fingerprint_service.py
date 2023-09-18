@@ -20,8 +20,7 @@ def add_fingerprint_to_db(fingerprint_data):
 
 def check_fingerprint(fingerprint_data):
     student_id = check_against_all(fingerprint_data)
-    if student_id is None:
-        
+
 
 
 def check_against_all(fingerprint_data):
