@@ -18,7 +18,9 @@ router = APIRouter(
 
 
 @router.post
+async def register_barcode(
 
+):
 
 
 @router.post
