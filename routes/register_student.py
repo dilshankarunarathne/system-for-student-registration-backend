@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
 from security.authorize import oauth2_scheme, get_current_user, credentials_exception
+from services.fingerprint_service import add_fingerprint_to_db
 
 """
     routers for registering students inserting information to the db
