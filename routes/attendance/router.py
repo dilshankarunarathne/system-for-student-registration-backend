@@ -25,3 +25,5 @@ def mark_by_face(
         raise credentials_exception
 
     contents = await image.read()
+
+    
