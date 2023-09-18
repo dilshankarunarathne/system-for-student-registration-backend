@@ -35,3 +35,4 @@ class FingerprintDAO:
             self.cnx.close()
 
     def add_fingerprint(self, fingerprint_data):
+        
