@@ -46,3 +46,5 @@ class FingerprintDAO:
         cursor.execute(add_fingerprint, data_fingerprint)
         self.cnx.commit()
         cursor.close()
+
+    
