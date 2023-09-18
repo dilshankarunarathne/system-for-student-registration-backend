@@ -47,7 +47,7 @@ class FingerprintDAO:
         self.cnx.commit()
         cursor.close()
 
-    def get_all_fingerprints:
+    def get_all_fingerprints(self):
 
     def get_next_id(self) -> int:
         cursor = self.cnx.cursor()
