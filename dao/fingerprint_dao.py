@@ -47,7 +47,7 @@ class FingerprintDAO:
         self.cnx.commit()
         cursor.close()
 
-    def get_all_fingerprints(self):
+    def get_all_fingerprints(self) -> :
         cursor = self.cnx.cursor()
         query = "SELECT * FROM fingerprints"
         cursor.execute(query)
