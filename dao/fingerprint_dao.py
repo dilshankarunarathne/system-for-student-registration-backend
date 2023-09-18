@@ -51,7 +51,8 @@ class FingerprintDAO:
         cursor = self.cnx.cursor()
         query = "SELECT * FROM fingerprints"
         cursor.execute(query)
-        
+
+        return cursor.fetchall()
 
     def get_next_id(self) -> int:
         cursor = self.cnx.cursor()
