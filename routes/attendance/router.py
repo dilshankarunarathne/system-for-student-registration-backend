@@ -18,4 +18,5 @@ def mark_by_face(
     if image.content_type != "image/jpeg":
         return "Only jpeg images are supported"
 
-    
+    if get_current_user(token) is None:
+        raise credentials_exception
