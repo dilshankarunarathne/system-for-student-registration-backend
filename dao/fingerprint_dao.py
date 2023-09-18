@@ -37,3 +37,11 @@ class FingerprintDAO:
     def add_fingerprint(self, fingerprint_data):
         if fingerprint_data is None:
             raise ValueError("fingerprint data is null")
+        cursor = self.cnx.cursor()
+        add_user = ("INSERT INTO users "
+                    "(id, username, email, is_instructor, hashed_password) "
+                    "VALUES (%s, %s, %s, %s, %s)")
+        data_user = (user.id, user.username, user.email, user.is_instructor, user.hashed_password)
+        cursor.execute(add_user, data_user)
+        self.cnx.commit()
+        cursor.close()
