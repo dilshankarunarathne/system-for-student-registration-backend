@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
-from security.authorize import oauth2_scheme, get_current_user
+from security.authorize import oauth2_scheme, get_current_user, credentials_exception
 
 """
     routers for attendance marking
