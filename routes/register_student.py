@@ -36,7 +36,7 @@ async def register_fingerprint(
     contents = await fingerprint_data.read()
     nparray = np.fromstring(contents, np.uint8)
 
-    add_fingerprint_to_db(nparray, )
+    add_fingerprint_to_db(nparray, reg_no)
 
     # TODO redirect attendance page
     return RedirectResponse("/user", status_code=200)
