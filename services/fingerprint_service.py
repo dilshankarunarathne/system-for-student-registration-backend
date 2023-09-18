@@ -27,3 +27,4 @@ def check_against_all(fingerprint_data):
 
     for fingerprint in fingerprints:
         if matches_fingerprint(fingerprint, fingerprint_data):
+            return 
