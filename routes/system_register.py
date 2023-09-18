@@ -15,5 +15,5 @@ router = APIRouter(
 async def register_fingerprint(
 
 ):
-    pass # TODO
+    pass  # TODO
 
