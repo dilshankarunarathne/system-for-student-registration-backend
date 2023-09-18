@@ -15,3 +15,4 @@ def mark_by_face(
         image: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 )
+    
