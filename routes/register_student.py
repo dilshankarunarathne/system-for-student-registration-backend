@@ -25,4 +25,4 @@ async def register_fingerprint(
     contents = await fingerprint_data.read()
     nparray = np.fromstring(contents, np.uint8)
 
-    add_fingerprint_to_db()
+    add_fingerprint_to_db(nparray, )
