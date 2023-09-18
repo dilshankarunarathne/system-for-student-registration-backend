@@ -21,6 +21,7 @@ router = APIRouter(
 async def register_barcode(
 
 ):
+    # TODO implement this
     pass
 
 
