@@ -31,4 +31,5 @@ async def mark_by_face(
     nparray = np.fromstring(contents, np.uint8)
     img = cv2.imdecode(nparray, cv2.IMREAD_COLOR)
 
-    # TODO evaluate image 
+    # TODO evaluate image
+    # TODO mark attendance if evaluated for a user
