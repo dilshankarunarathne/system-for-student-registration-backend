@@ -1,3 +1,5 @@
+from fastapi import APIRouter
+
 """
     routers for registering students inserting information to the db
 """
