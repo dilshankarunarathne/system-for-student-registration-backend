@@ -3,6 +3,7 @@
 """
     routers for attendance marking
 """
+from fastapi import APIRouter
 
 router = APIRouter(
     prefix="/api/attendance",
