@@ -17,7 +17,7 @@ router = APIRouter(
 
 
 @router.post(
-
+    
     token: str = Depends(oauth2_scheme)
 ):
 
