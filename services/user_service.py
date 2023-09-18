@@ -1,6 +1,13 @@
 from models.user_model import User
 
-from services.database_service import dao
+from dao.user_dao import UserDAO
+
+dao = UserDAO(host="localhost", user="root", password="", database="enad")
+try:
+    dao.connect()
+    print("EnAdDB connection successful")
+except Exception as e:
+    print("User DB connection error:", e)
 
 
 def add_new_user(user: User):
