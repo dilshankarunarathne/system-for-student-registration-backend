@@ -19,7 +19,9 @@ router = APIRouter(
 
 @router.post
 async def register_barcode(
-
+reg_no: str,
+        fingerprint_data: UploadFile = File(...),
+        token: str = Depends(oauth2_scheme)
 ):
     # TODO implement this
     pass
