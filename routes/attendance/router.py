@@ -25,7 +25,7 @@ async def mark_by_face(
 
     :param image: image of the face
     :param token: oauth2 token
-    :return:
+    :return: redirect to /attendance
     """
     if image.content_type != "image/jpeg":
         return "Only jpeg images are supported"
