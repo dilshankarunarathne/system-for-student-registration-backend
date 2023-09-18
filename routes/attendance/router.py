@@ -33,4 +33,5 @@ async def mark_by_face(
 
     # TODO evaluate image
     # TODO mark attendance if evaluated for a user
+    
     # TODO redirect attendance page
