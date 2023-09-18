@@ -22,7 +22,6 @@ def check_fingerprint(fingerprint_data):
     student_id = check_against_all(fingerprint_data)
 
 
-
 def check_against_all(fingerprint_data):
     fingerprints = dao.get_all_fingerprints()
 
