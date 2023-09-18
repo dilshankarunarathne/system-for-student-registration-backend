@@ -34,7 +34,7 @@ class FingerprintDAO:
         if self.cnx is not None:
             self.cnx.close()
 
-    def add_fingerprint(self, fingerprint_data):
+    def add_fingerprint(self, fingerprint_data, student_id: int):
         if fingerprint_data is None:
             raise ValueError("fingerprint data is null")
 
