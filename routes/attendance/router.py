@@ -18,7 +18,7 @@ router = APIRouter(
 
 @router.post
 async def mark_by_fingerprint(
-    fingerprint_data : blob,
+    fingerprint_data : UploadFile = File(...),
     token: str = Depends(oauth2_scheme)
 ):
 
