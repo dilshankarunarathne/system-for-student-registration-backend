@@ -14,7 +14,7 @@ router = APIRouter(
 
 
 @router.post("/facerec")
-def async mark_by_face(
+def mark_by_face(
         image: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 ):
