@@ -11,4 +11,4 @@ router = APIRouter(
 )
 
 @router.post("/facerec")
-def 
+def recognize_face
