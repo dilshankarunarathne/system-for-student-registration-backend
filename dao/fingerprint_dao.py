@@ -39,7 +39,7 @@ class FingerprintDAO:
             raise ValueError("fingerprint data is null")
 
         cursor = self.cnx.cursor()
-        add_fingerprint = ("INSERT INTO fingerprint "
+        add_fingerprint = ("INSERT INTO fingerprints "
                            "(id, student_id, fingerprint) "
                            "VALUES (%s, %s, %s)")
         data_fingerprint = (get_next_id(), student_id, fingerprint_data)
@@ -47,4 +47,12 @@ class FingerprintDAO:
         self.cnx.commit()
         cursor.close()
 
-    
+    def get_next_id(self) -> int:
+        cursor = self.cnx.cursor()
+        query = "SELECT MAX(id) FROM fingerprints"
+        cursor.execute(query)
+        row = cursor.fetchone()
+        cursor.close()
+        if row is None:
+            return 0
+        return row[0]
