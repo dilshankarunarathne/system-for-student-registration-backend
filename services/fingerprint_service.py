@@ -1,4 +1,5 @@
 from dao.fingerprint_dao import FingerprintDAO
+
 """
     middleware services for fingerprint data
 """
