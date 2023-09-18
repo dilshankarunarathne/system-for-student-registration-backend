@@ -19,8 +19,8 @@ router = APIRouter(
 
 @router.post
 async def register_fingerprint(
-        fingerprint_data: UploadFile = File(...),
         reg_no: str,
+        fingerprint_data: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 ):
     """
