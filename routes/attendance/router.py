@@ -22,7 +22,7 @@ async def mark_by_fingerprint(
     token: str = Depends(oauth2_scheme)
 ):
     """
-    provides 
+    provides the ability to mark the attendance of a student via fingerprint
     :param fingerprint_data:
     :param token:
     :return:
