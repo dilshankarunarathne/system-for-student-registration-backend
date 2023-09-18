@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
 from security.authorize import oauth2_scheme
+from services.fingerprint_service import dao
 
 """
     routers for registering students inserting information to the db
@@ -18,4 +19,7 @@ async def register_fingerprint(
         fingerprint_data: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 ):
-    pass  # TODO implement the router
+    if get_current_user(token) is None:
+        raise credentials_exception
+    
+    dao.add_fingerprint()
