@@ -14,4 +14,4 @@ def check_fingerprint(fingerprint_data):
 
 
 def check_against_all(fingerprint_data):
-    
+    fingerprints = 
