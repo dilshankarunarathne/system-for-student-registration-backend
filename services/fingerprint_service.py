@@ -13,4 +13,5 @@ def check_fingerprint(fingerprint_data):
     pass
 
 
-def check_agains_all(fingerprint_data):
+def check_against_all(fingerprint_data):
+    
