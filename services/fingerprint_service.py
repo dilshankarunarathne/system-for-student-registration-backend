@@ -9,4 +9,4 @@ def add_fingerprint_to_db(fingerprint_data):
 
 
 def check_fingerprint(fingerprint_data):
-    # TODO check if a given fingerprint exists in the database
+    # TODO check if a given fingerprint matches an exists in the database
