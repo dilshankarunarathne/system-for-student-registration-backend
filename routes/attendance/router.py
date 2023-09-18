@@ -22,7 +22,7 @@ async def mark_by_id(
     token: str = Depends(oauth2_scheme)
 ):
     """
-        provides the ability to mark the attendance of a student via fingerprint
+        provides the ability to mark the attendance of a student via student id barcode
         :param barcode_data: binary data of the barcode extracted from the scanner
         :param token: oauth2 token
         :return: redirect to /attendance
