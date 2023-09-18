@@ -21,6 +21,7 @@ async def mark_by_face(
         image: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 ):
+    
     if image.content_type != "image/jpeg":
         return "Only jpeg images are supported"
 
@@ -33,7 +34,7 @@ async def mark_by_face(
     img = cv2.imdecode(nparray, cv2.IMREAD_COLOR)
 
     # TODO evaluate image
-    
+
     # TODO mark attendance if evaluated for a user
 
     # TODO redirect attendance page
