@@ -14,7 +14,7 @@ except Exception as e:
 
 
 def add_fingerprint_to_db(fingerprint_data):
-    add_fingerprint()
+    dao.add_fingerprint()
 
 
 def check_fingerprint(fingerprint_data):
