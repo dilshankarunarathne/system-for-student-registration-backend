@@ -6,7 +6,7 @@ from mysql.connector import errorcode
 from models.user_model import User, UserInDB
 
 """
-    middleware for accessing the user database and performing CRUD operations on the user table
+    middleware for accessing the user student and performing CRUD operations on the user table
 """
 
 
