@@ -36,3 +36,6 @@ async def register_fingerprint(
     nparray = np.fromstring(contents, np.uint8)
 
     add_fingerprint_to_db(nparray, )
+
+    # TODO redirect attendance page
+    return RedirectResponse("/home", status_code=200)
