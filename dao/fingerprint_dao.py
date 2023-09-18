@@ -36,4 +36,4 @@ class FingerprintDAO:
 
     def add_fingerprint(self, fingerprint_data):
         if fingerprint_data is None:
-            
+            raise ValueError("fingerprint data is null")
