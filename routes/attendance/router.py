@@ -17,7 +17,8 @@ router = APIRouter(
 
 
 @router.post(
-    
+
+    token: str
 ):
 
 
