@@ -16,6 +16,9 @@ router = APIRouter(
 )
 
 
+
+
+
 @router.post("/facerec")
 async def mark_by_face(
         image: UploadFile = File(...),
