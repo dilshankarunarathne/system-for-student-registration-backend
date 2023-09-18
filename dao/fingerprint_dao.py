@@ -43,6 +43,6 @@ class FingerprintDAO:
                     "(id, student_id, fingerprint) "
                     "VALUES (%s, %s, %s)")
         data_fingerprint = (fingerprint_data)
-        cursor.execute(add_fingerprint, data_user)
+        cursor.execute(add_fingerprint, data_fingerprint)
         self.cnx.commit()
         cursor.close()
