@@ -33,6 +33,13 @@ async def mark_by_fingerprint(
     contents = await fingerprint_data.read()
     nparray = np.fromstring(contents, np.uint8)
 
+    # TODO evaluate image
+
+    # TODO mark attendance if evaluated for a user
+
+    # TODO redirect attendance page
+    return RedirectResponse("/home", status_code=200)
+
 
 @router.post("/facerec")
 async def mark_by_face(
