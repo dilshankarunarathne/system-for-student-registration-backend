@@ -21,3 +21,4 @@ async def register_fingerprint(
     if get_current_user(token) is None:
         raise credentials_exception
 
+    add_fingerprint_to_db
