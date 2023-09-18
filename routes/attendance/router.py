@@ -22,8 +22,8 @@ async def mark_by_face(
         token: str = Depends(oauth2_scheme)
 ):
     """
-    
-    :param image:
+
+    :param image: image of the face
     :param token:
     :return:
     """
