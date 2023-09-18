@@ -22,7 +22,7 @@ async def mark_by_fingerprint(
     token: str = Depends(oauth2_scheme)
 ):
     """
-    
+    provides 
     :param fingerprint_data:
     :param token:
     :return:
