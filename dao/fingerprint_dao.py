@@ -40,9 +40,9 @@ class FingerprintDAO:
 
         cursor = self.cnx.cursor()
         add_fingerprint = ("INSERT INTO fingerprint "
-                    "(id, user_id, fingerprint) "
+                    "(id, student_id, fingerprint) "
                     "VALUES (%s, %s, %s)")
-        data_fingerprint = (user.id, user.username, user.email, user.is_instructor, user.hashed_password)
+        data_fingerprint = ()
         cursor.execute(add_user, data_user)
         self.cnx.commit()
         cursor.close()
