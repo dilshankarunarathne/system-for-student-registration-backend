@@ -18,8 +18,8 @@ router = APIRouter(
 
 @router.post
 async def mark_by_fingerprint(
-    fingerprint_data : UploadFile = File(...),
-    token: str = Depends(oauth2_scheme)
+        fingerprint_data: UploadFile = File(...),
+        token: str = Depends(oauth2_scheme)
 ):
     """
     provides the ability to mark the attendance of a student via fingerprint
@@ -33,7 +33,7 @@ async def mark_by_fingerprint(
     contents = await fingerprint_data.read()
     nparray = np.fromstring(contents, np.uint8)
 
-    # TODO evaluate the fingerprint 
+    # TODO evaluate the fingerprint
 
     # TODO mark attendance if evaluated for a user
 
