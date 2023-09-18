@@ -22,6 +22,12 @@ async def register_fingerprint(
 
         token: str = Depends(oauth2_scheme)
 ):
+    """
+    
+    :param fingerprint_data:
+    :param token:
+    :return:
+    """
     if get_current_user(token) is None:
         raise credentials_exception
 
