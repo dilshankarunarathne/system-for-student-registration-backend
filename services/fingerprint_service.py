@@ -2,7 +2,7 @@
     middleware services for fingerprint data
 """
 
-dao = UserDAO(host="localhost", user="root", password="", database="enad")
+dao = FingerprintDAO(host="localhost", user="root", password="", database="enad")
 try:
     dao.connect()
     print("EnAdDB connection successful")
