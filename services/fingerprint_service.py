@@ -8,4 +8,4 @@ def add_fingerprint_to_db(fingerprint_data):
     pass
 
 
-
+def check_fingerprint
