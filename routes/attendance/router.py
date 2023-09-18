@@ -1,5 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
+from security.authorize import oauth2_scheme
+
 """
     routers for attendance marking
 """
