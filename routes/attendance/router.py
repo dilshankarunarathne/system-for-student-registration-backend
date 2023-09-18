@@ -25,7 +25,7 @@ async def mark_by_fingerprint(
     provides the ability to mark the attendance of a student via fingerprint
     :param fingerprint_data: binary data extracted from the fingerprint sensor
     :param token: oauth2 token
-    :return:
+    :return: redirecto to /attendance
     """
 
 
