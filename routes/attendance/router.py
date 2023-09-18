@@ -27,7 +27,8 @@ async def mark_by_fingerprint(
     :param token: oauth2 token
     :return: redirect to /attendance
     """
-    
+    if get_current_user(token) is None:
+        raise credentials_exception
 
 
 @router.post("/facerec")
