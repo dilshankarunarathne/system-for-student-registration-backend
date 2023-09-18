@@ -21,7 +21,12 @@ async def mark_by_fingerprint(
     fingerprint_data : UploadFile = File(...),
     token: str = Depends(oauth2_scheme)
 ):
+    """
     
+    :param fingerprint_data:
+    :param token:
+    :return:
+    """
 
 
 @router.post("/facerec")
