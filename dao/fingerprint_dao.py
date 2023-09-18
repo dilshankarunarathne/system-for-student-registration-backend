@@ -47,6 +47,8 @@ class FingerprintDAO:
         self.cnx.commit()
         cursor.close()
 
+    
+
     def get_next_id(self) -> int:
         cursor = self.cnx.cursor()
         query = "SELECT MAX(id) FROM fingerprints"
