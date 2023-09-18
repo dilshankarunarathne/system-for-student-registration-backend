@@ -18,7 +18,7 @@ router = APIRouter(
 
 @router.post
 async def mark_by_id(
-    barcode_data
+    barcode_data:
 ):
 
 
