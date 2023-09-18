@@ -1,4 +1,5 @@
 from dao.fingerprint_dao import FingerprintDAO
+from fingerprint.main import matches_fingerprint
 
 """
     middleware services for fingerprint data
@@ -18,8 +19,7 @@ def add_fingerprint_to_db(fingerprint_data):
 
 
 def check_fingerprint(fingerprint_data):
-    # TODO check if a given fingerprint matches an existing user in the database
-    pass
+    if 
 
 
 def check_against_all(fingerprint_data):
