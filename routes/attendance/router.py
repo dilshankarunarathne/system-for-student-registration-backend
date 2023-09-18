@@ -16,7 +16,8 @@ router = APIRouter(
 )
 
 
-@router.post(
+@router.post
+(
     fingerprint_data : blob,
     token: str = Depends(oauth2_scheme)
 ):
