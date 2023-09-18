@@ -1,1 +1,1 @@
-def matches_fingerprint
+def matches_fingerprint()
