@@ -48,5 +48,5 @@ async def register_fingerprint(
 
     add_fingerprint_to_db(nparray, reg_no)
 
-    # TODO redirect attendance page
+    # TODO redirect user page
     return RedirectResponse("/user", status_code=200)
