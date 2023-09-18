@@ -19,6 +19,7 @@ router = APIRouter(
 @router.post
 async def register_fingerprint(
         fingerprint_data: UploadFile = File(...),
+
         token: str = Depends(oauth2_scheme)
 ):
     if get_current_user(token) is None:
