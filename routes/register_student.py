@@ -17,6 +17,9 @@ router = APIRouter(
 )
 
 
+
+
+
 @router.post
 async def register_barcode(
         reg_no: str,
