@@ -9,3 +9,4 @@ def add_fingerprint_to_db(fingerprint_data):
 
 
 def check_fingerprint(fingerprint_data):
+    # TODO 
