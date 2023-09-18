@@ -21,7 +21,24 @@ async def mark_by_id(
     barcode_data: UploadFile = File(...),
     token: str = Depends(oauth2_scheme)
 ):
-    
+    """
+        provides the ability to mark the attendance of a student via fingerprint
+        :param fingerprint_data: binary data extracted from the fingerprint sensor
+        :param token: oauth2 token
+        :return: redirect to /attendance
+        """
+    if get_current_user(token) is None:
+        raise credentials_exception
+
+    contents = await fingerprint_data.read()
+    nparray = np.fromstring(contents, np.uint8)
+
+    # TODO evaluate the fingerprint
+
+    # TODO mark attendance if evaluated for a user
+
+    # TODO redirect attendance page
+    return RedirectResponse("/home", status_code=200)
 
 
 @router.post
