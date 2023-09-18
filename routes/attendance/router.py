@@ -15,4 +15,5 @@ def mark_by_face(
         image: UploadFile = File(...),
         token: str = Depends(oauth2_scheme)
 )
-    
+    if image.content_type != "image/jpeg":
+        return "Only jpeg images are supported"
