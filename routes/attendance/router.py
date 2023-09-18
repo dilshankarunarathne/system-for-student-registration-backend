@@ -11,4 +11,6 @@ router = APIRouter(
 )
 
 @router.post("/facerec")
-def mark_by_face()
+def mark_by_face(
+        
+)
