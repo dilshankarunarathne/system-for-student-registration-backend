@@ -22,4 +22,7 @@ async def register_fingerprint(
     if get_current_user(token) is None:
         raise credentials_exception
 
+    contents = await fingerprint_data.read()
+    nparray = np.fromstring(contents, np.uint8)
+
     add_fingerprint_to_db()
