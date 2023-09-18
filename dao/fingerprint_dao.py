@@ -49,7 +49,7 @@ class FingerprintDAO:
 
     def get_all_fingerprints(self):
         cursor = self.cnx.cursor()
-        
+
 
     def get_next_id(self) -> int:
         cursor = self.cnx.cursor()
