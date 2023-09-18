@@ -26,5 +26,5 @@ def check_against_all(fingerprint_data):
     fingerprints = dao.get_all_fingerprints()
 
     for fingerprint in fingerprints:
-        if matches_fingerprint(fingerprint, fingerprint_data):
-            return 
+        if matches_fingerprint(fingerprint[2], fingerprint_data):
+            return
