@@ -29,3 +29,7 @@ class FingerprintDAO:
                 print("Database does not exist")
             else:
                 print(err)
+
+    def disconnect(self):
+        if self.cnx is not None:
+            self.cnx.close()
