@@ -22,7 +22,7 @@ async def register_student(
         full_name: str = Form(...),
         reg_no: str = Form(...),
         batch: str = Form(...),
-        
+        department: 
 ):
     # TODO implement this
     pass
