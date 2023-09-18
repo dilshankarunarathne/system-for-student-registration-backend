@@ -22,6 +22,7 @@ async def register_student(
 
 ):
     # TODO implement this
+    pass
 
 
 @router.post
