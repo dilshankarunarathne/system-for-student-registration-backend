@@ -35,4 +35,4 @@ async def mark_by_face(
     # TODO mark attendance if evaluated for a user
 
     # TODO redirect attendance page
-    return RedirectResponse(redirect_url, status_code=303)
+    return RedirectResponse(redirect_url, status_code=200)
