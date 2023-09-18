@@ -24,7 +24,7 @@ async def mark_by_face(
     """
 
     :param image: image of the face
-    :param token:
+    :param token: oauth2 token
     :return:
     """
     if image.content_type != "image/jpeg":
