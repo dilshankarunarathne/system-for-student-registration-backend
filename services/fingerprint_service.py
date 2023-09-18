@@ -11,3 +11,5 @@ def add_fingerprint_to_db(fingerprint_data):
 def check_fingerprint(fingerprint_data):
     # TODO check if a given fingerprint matches an existing user in the database
     pass
+
+
