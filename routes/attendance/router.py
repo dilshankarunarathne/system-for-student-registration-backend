@@ -18,7 +18,7 @@ router = APIRouter(
 
 @router.post(
 
-    token: str
+    token: str = Depends()
 ):
 
 
