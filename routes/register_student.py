@@ -23,8 +23,8 @@ async def register_fingerprint(
         token: str = Depends(oauth2_scheme)
 ):
     """
-    
-    :param fingerprint_data:
+    can register a fingerprint for a student, need to provide the student registration number along with it
+    :param fingerprint_data: fingerprint data 
     :param token:
     :return:
     """
