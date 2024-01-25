@@ -5,10 +5,6 @@ from mysql.connector import errorcode
 
 from models.user_model import User, UserInDB
 
-"""
-    middleware for accessing the herb database and performing CRUD operations on the user table
-"""
-
 
 class UserDAO:
     def __init__(self, host, user, password, database):
