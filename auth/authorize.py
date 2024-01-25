@@ -9,10 +9,6 @@ from models.token_model import TokenData
 from auth.hashing import verify_password, is_token_blacklisted, SECRET_KEY, ALGORITHM
 from services.user_service import get_user
 
-"""
-    authorization function middleware
-"""
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:8000/auth/login")
 
 credentials_exception = HTTPException(
