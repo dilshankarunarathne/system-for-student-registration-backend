@@ -6,6 +6,7 @@ from mysql.connector import errorcode
 from models.user_model import User, UserInDB
 
 
+
 class UserDAO:
     def __init__(self, host, user, password, database):
         self.host = host
