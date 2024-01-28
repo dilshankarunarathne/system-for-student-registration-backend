@@ -8,6 +8,8 @@ blacklist_collection = mydb['blacklist']
 
 def blacklist_token(token):
     _id = _get_next_id()
+    current_time = datetime.now()
+    
     blacklist_collection.insert_one(
         {
             'id': _id,
