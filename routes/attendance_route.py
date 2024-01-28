@@ -4,7 +4,7 @@ from fastapi import APIRouter, Form, Depends, HTTPException, status
 
 from auth.authorize import credentials_exception, oauth2_scheme, get_current_user
 from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student, \
-    mark_attendance, clear_all_records
+    mark_attendance, clear_all_records, create_placeholder_document
 
 router = APIRouter(
     prefix="/api/attendance",
