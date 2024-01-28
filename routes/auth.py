@@ -36,7 +36,6 @@ async def register_user(
 @router.post("/login")
 async def login_for_access_token(
         form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
-        role: str = Form(...)
 ):
     user = authenticate_user(form_data.username, form_data.password)
     if not user:
