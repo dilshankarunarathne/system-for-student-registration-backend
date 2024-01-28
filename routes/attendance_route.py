@@ -2,6 +2,7 @@ from fastapi import APIRouter, Form, Depends, HTTPException, status
 
 from auth.authorize import credentials_exception, oauth2_scheme, get_current_user
 from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student
+from services.user_service import get_role
 
 router = APIRouter(
     prefix="/api/attendance",
@@ -15,7 +16,7 @@ async def clear_all_records(
         token: str = Depends(oauth2_scheme)
 ):
     user = get_current_user(token)
-    
+
     if user is None:
         raise credentials_exception
 
