@@ -3,9 +3,6 @@ from middleware.student_registration import register_student
 
 
 def _add_new_user(username: str, password_hash: str, email: str, role: str):
-    # TODO: use middleware
-    # register_student()
-
     user = insert_user(username, password_hash, email, role)
     if user:
         return \
@@ -17,6 +14,9 @@ def _add_new_user(username: str, password_hash: str, email: str, role: str):
 
 
 def add_new_student():
+    # TODO: use middleware
+    # register_student()
+
     pass
 
 
