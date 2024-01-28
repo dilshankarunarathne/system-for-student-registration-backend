@@ -1,4 +1,3 @@
-from config import config
 from dao.user_dao import search_user_info_by_name, get_user_info_by_id
 from models.user_model import User
 
