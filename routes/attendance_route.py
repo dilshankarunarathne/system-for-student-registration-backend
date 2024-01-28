@@ -24,7 +24,7 @@ async def mark_single_attendance(
     if user is None:
         raise credentials_exception
 
-    return mark_attendance(course_id, student_id, date, timestamp)
+    return mark_attendance(student_id, course_id, date, timestamp)
 
 
 @router.post("/clear")
