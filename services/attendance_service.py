@@ -13,4 +13,4 @@ def clear_all_records():
     return delete_all_documents()
 
 
-
+def 
