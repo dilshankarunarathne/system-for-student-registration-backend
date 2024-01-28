@@ -13,7 +13,7 @@ def clear_all_records():
     return delete_all_documents()
 
 
-def mark_attendance(student_id, course_id, date, attended_time):
+def mark_attendance(student_id, course_id, date, attended_time, total_time):
     attendance_info = get_attendance_info_for_lecture(course_id, date)
     if attendance_info is None:
         attendance_info = {
@@ -21,7 +21,7 @@ def mark_attendance(student_id, course_id, date, attended_time):
             'date': date,
             "student_id": student_id,
             "attended_time": attended_time,
-            "total_time": 0
+            "total_time": total_time
         }
     else:
         attendance_info['students'] = attendance_info['students'] if 'students' in attendance_info else []
