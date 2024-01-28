@@ -4,7 +4,7 @@ import base64
 
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
 
-mydb = client["advertisement"]
+mydb = client["student"]
 
 fs = gridfs.GridFS(mydb)
 
@@ -68,3 +68,8 @@ def fetch_ad_images(age_unformatted, gender):
         results.append((filename, file_data_base64, age))
 
     return results
+
+
+if __name__ == '__main__':
+    print(fs)
+
