@@ -19,6 +19,7 @@ def get_all_students_info():
 def get_student_info_by_id(id):
     filt = {'id': id}
     student = studentinfo_collection.find_one(filt)
+    return student
 
 
 def search_student_info_by_name(name):
