@@ -8,7 +8,12 @@ def add_new_user(username: str, password_hash: str, email: str, role: str):
 
     user = insert_user(username, password_hash, email, role)
     if user:
-        return {"message": "operation successful", "user": user['username'], "id": user['id']}
+        return \
+            {
+                "message": "operation successful",
+                "user": user['username'],
+                "id": user['id']
+            }
 
 
 def user_exists(username: str) -> bool:
