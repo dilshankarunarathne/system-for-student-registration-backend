@@ -6,4 +6,14 @@ mydb = client["studentinfo"]
 user_collection = mydb['student']
 
 
-
+def insert_student(student_id, student_name, student_email, student_course, student_year, student_semester):
+    student = {
+        'student_id': student_id,
+        'student_name': student_name,
+        'student_email': student_email,
+        'student_course': student_course,
+        'student_year': student_year,
+        'student_semester': student_semester
+    }
+    user_collection.insert_one(student)
+    return student
