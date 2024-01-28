@@ -17,6 +17,7 @@ def _add_new_user(username: str, password_hash: str, email: str, role: str):
 def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_name: str):
     user = _add_new_user(username, password_hash, email, 'student')
     _u_id = user['id']
+    lecturer = insert_lecturer(lecturer_name, _u_id)
 
 
 def add_new_student(username: str, password_hash: str, email: str, student_name: str, student_year: str, reg_no: str):
