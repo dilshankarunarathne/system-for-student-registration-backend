@@ -20,7 +20,7 @@ def mark_attendance(student_id, course_id, date, attended_time):
             'course_id': course_id,
             'date': date,
             "student_id": student_id,
-            
+            "attended_time": attended_time,
         }
     else:
         attendance_info['students'] = attendance_info['students'] if 'students' in attendance_info else []
