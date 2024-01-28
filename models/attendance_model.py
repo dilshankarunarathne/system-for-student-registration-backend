@@ -6,4 +6,4 @@ class Attendance(BaseModel):
     student_id: int
     course_id: int
     date: str
-    attendance: bool
+    attended_time: int
