@@ -73,7 +73,7 @@ async def attendance_info_for_class(
         date: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
-    if get_current_user(token) is None:
+    if await get_current_user(token) is None:
         raise credentials_exception
 
     return get_attendance_info_for_lecture(course_id, date)
