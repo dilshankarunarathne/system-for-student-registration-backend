@@ -15,5 +15,11 @@ def clear_all_records():
 
 
 def mark_attendance(student_id, course_id, date, attended_time, total_time):
-    
+    attendance_info = {
+        "student_id": student_id,
+        "course_id": course_id,
+        "date": date,
+        "attended_time": attended_time,
+        "total_time": total_time
+    }
     return query_mark_attendance(attendance_info)
