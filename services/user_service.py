@@ -4,6 +4,7 @@ from models.user_model import User
 
 def add_new_user(user: User):
     # TODO: get files
+    # TODO: store files
     pass
 
 
