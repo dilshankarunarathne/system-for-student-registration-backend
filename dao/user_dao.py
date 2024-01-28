@@ -39,6 +39,9 @@ def insert_user(username, password_hash, email, role):
 
 
 def get_role_by_id(user_id):
+    filt = {'id': user_id}
+    user = user_collection.find_one(filt)
+    return user['role']
 
 
 def _get_last_user_id():
