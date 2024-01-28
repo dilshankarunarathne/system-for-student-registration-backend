@@ -7,4 +7,6 @@ def all_student_info():
     return students
 
 
-
+def get_student_info_by_id(_id):
+    student = get_student_info_by_id(_id)
+    return student
