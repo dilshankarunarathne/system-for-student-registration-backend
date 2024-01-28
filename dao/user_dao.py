@@ -31,11 +31,11 @@ def insert_user(username, email, password, role):
         'id': _get_last_user_id() + 1,
         'username': username,
         'email': email,
+        'hashed_password': password, 
         'role': role
     }
     user_collection.insert_one(user)
 
-    
 
 
 def _get_last_user_id():
