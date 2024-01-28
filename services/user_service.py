@@ -15,7 +15,18 @@ def _add_new_user(username: str, password_hash: str, email: str, role: str):
 
 
 def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_name: str):
+    user = _add_new_user(username, password_hash, email, 'student')
+    _u_id = user['id']
+    student = insert_student(student_name, student_year, reg_no, _u_id)
 
+    if user and student:
+        return \
+            {
+                "message": "operation successful",
+                "user_id": user['id'],
+                "student_id": student['id'],
+                "username": user['username']
+            }
 
 
 def add_new_student(username: str, password_hash: str, email: str, student_name: str, student_year: str, reg_no: str):
