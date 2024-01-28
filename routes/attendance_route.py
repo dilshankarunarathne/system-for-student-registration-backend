@@ -82,7 +82,3 @@ async def attendance_info_for_class(
         raise credentials_exception
 
     attendance = get_attendance_info_for_lecture(course_id, date)
-
-    (final_percentage, ext, ext_type) = get_percentage(attendance)
-
-    return {"attendance": attendance, "percentage": final_percentage, "ext": ext, "ext_type": ext_type}
