@@ -1,9 +1,11 @@
+from bson import json_util
 from dao.attendance_dao import query_attendance_info_for_student, query_attendance_info_for_class, delete_all_documents, \
     query_mark_attendance, insert_placeholder_document
 
 
 def get_attendance_info_for_student(student_id):
     data = query_attendance_info_for_student(student_id)
+    data['_id'] = str(data['_id'])
     return data
 
 

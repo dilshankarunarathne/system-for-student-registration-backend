@@ -1,4 +1,11 @@
 def get_percentage(attendance_data):
+    if isinstance(attendance_data, dict):
+        attendance_data = [attendance_data]
+    elif not all(isinstance(i, dict) for i in attendance_data):
+        print(attendance_data)
+        print(type(attendance_data))
+        raise ValueError("attendance_data must be a list of dictionaries")
+
     current_percentage = []
     for i in attendance_data:
         a_time = int(i['attended_time'])
