@@ -10,7 +10,7 @@ from models.token_model import TokenData
 from auth.hashing import verify_password, is_token_blacklisted, SECRET_KEY, ALGORITHM
 from services.user_service import get_user
 
-tokenUrl = config.get("auth", "tokenurl")
+tokenUrl = config.get("auth", "auth.tokenurl")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=tokenUrl)
 
