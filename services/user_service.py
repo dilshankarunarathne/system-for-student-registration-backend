@@ -3,7 +3,7 @@ from models.user_model import User
 
 
 def add_new_user(user: User):
-    dao.create_user(user)
+    pass
 
 
 def user_exists(username: str) -> bool:
