@@ -13,4 +13,12 @@ def clear_all_records():
     return delete_all_documents()
 
 
-def 
+def mark_attendance(student_id, course_id, date, attendance):
+    attendance_info = query_attendance_info_for_student(student_id)
+    if attendance_info is None:
+        attendance_info = {
+            'student_id': student_id,
+            'attendance': []
+        }
+    attendance_info['attendance'].append({'course_id': course_id, 'date': date, 'attendance': attendance})
+    return attendance_info
