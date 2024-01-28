@@ -4,7 +4,6 @@ from dao.attendance_dao import query_attendance_info_for_student, query_attendan
 
 def get_attendance_info_for_student(student_id):
     data = query_attendance_info_for_student(student_id)
-    print(data)
     return data
 
 
