@@ -24,6 +24,7 @@ def encode_known_faces(
         for encoding in face_encodings:
             names.append(name)
             encodings.append(encoding)
+            print(".")
 
     name_encodings = {"names": names, "encodings": encodings}
     with encodings_location.open(mode="wb") as f:
