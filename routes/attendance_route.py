@@ -29,7 +29,6 @@ async def mark_single_attendance(
     date = datetime.now().strftime("%d/%m/%Y")
 
     attendance = mark_attendance(student_id, course_id, date, attended_time, total_time)
-    print(attendance)
 
     return {"message": "operation successful", "attendance marked": attendance["id"]}
 
