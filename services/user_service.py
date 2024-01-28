@@ -3,7 +3,7 @@ from middleware.student_registration import register_student
 from models.user_model import User
 
 
-def add_new_user(user: User):
+def add_new_user(username: str, password: str, user_type: str):
     # TODO: use middleware
     register_student()
 
