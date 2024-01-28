@@ -14,7 +14,7 @@ def get_all_students():
     return students
 
 
-def queryget_student_info_by_id(_id):
+def query_student_info_by_id(_id):
     filt = {'id': _id}
     student = student_collection.find_one(filt)
     return student
