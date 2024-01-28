@@ -1,2 +1,2 @@
-def register_student(request):
-    
+def register_student():
+
