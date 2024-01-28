@@ -4,6 +4,8 @@ from models.user_model import User
 
 def add_new_user(user: User):
     # TODO: use middleware
+    
+
     # TODO: add user to database
     pass
 
