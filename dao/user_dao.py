@@ -28,7 +28,7 @@ def search_user_info_by_name(name):
 
 def insert_user(username, email, password, role):
     user = {
-        'id': get_last_user_id() + 1,
+        'id': _get_last_user_id() + 1,
         'username': username,
         'email': email,
         'password': password,
@@ -44,4 +44,4 @@ def _get_last_user_id():
 
 
 if __name__ == '__main__':
-    print(get_last_user_id())
+    print(_get_last_user_id())
