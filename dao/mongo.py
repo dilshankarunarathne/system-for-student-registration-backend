@@ -4,7 +4,7 @@ import base64
 
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
 
-mydb = client["student"]
+mydb = client["studentinfo"]
 
 fs = gridfs.GridFS(mydb)
 
