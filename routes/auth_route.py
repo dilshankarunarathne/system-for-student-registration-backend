@@ -67,7 +67,6 @@ async def register_lecturer(
     return add_new_lecturer(username, hashed_password, email, lecturer_name)
 
 
-
 @router.post("/login")
 async def login_for_access_token(
         form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
