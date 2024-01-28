@@ -1,6 +1,5 @@
 from dao.user_dao import search_user_info_by_name, get_user_info_by_id, insert_user
 from middleware.student_registration import register_student
-from models.user_model import User
 
 
 def add_new_user(username: str, password: str, email: str, role: str):
