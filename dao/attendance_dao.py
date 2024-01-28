@@ -26,7 +26,8 @@ def delete_all_documents():
     return result.deleted_count
 
 
-
+def insert_placeholder_document():
+    attendance_collection.insert_one({"id": 1, "purpose": "placeholder for id auto-increment"})
 
 
 def query_mark_attendance(attendance_info):
