@@ -15,7 +15,6 @@ router = APIRouter(
 async def mark_single_attendance(
         course_id: str = Form(...),
         student_id: str = Form(...),
-        date: str = Form(...),
         attended_time: str = Form(...),
         total_time: str = Form(...),
         token: str = Depends(oauth2_scheme)
