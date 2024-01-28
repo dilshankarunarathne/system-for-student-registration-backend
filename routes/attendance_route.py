@@ -21,6 +21,7 @@ async def clear_all_records(
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You are not authorized to perform this operation",
+        )
 
     return clear_all_records()
 
