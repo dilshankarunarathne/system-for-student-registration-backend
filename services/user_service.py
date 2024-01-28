@@ -22,6 +22,15 @@ def add_new_student(username: str, password_hash: str, email: str, student_name:
     _u_id = user['id']
     student = insert_student(student_name, student_year, reg_no, _u_id)
 
+    if user and student:
+        return \
+            {
+                "message": "operation successful",
+                "user": user['user'],
+                "id": user['id'],
+                "student": student['name'],
+                "student_id": student['id']
+            }
 
 def user_exists(username: str) -> bool:
     if get_user(username) is None:
