@@ -21,6 +21,9 @@ def blacklist_token(token):
     )
 
 
+
+
+
 def _get_next_id():
     last_user = blacklist_collection.find().sort('id', -1).limit(1)
     for user in last_user:
