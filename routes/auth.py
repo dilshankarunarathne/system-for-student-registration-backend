@@ -30,8 +30,9 @@ async def register_user(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Username already exists",
         )
-    
+
     hashed_password = get_password_hash(password)
+    
     add_new_user(username, hashed_password, email, role)
 
 
