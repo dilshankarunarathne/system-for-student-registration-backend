@@ -65,12 +65,6 @@ def fetch_all_images(gender):
     return results
 
 
-def put_image_path(name, file_path):
-    with open(file_path, 'rb') as f:
-        image_id = fs.put(f, filename=name)
-    return str(image_id)
-
-
 def put_image(name, file, gender, age):
     image_id = fs.put(file, filename=name, gender=gender, age=age)
     return str(image_id)
