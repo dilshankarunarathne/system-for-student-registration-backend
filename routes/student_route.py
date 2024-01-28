@@ -25,4 +25,4 @@ async def get_all(
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    
+    return all_student_info()
