@@ -24,6 +24,7 @@ def mark_attendance(student_id, course_id, date, attended_time, total_time):
             "total_time": total_time
         }
     else:
+        print("attendance_info overwrite: ", attendance_info)
         attendance_info['students'] = attendance_info['students'] if 'students' in attendance_info else []
     attendance_info['students'].append({
         'student_id': student_id,
