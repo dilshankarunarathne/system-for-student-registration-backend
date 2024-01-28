@@ -29,7 +29,7 @@ def search_user_info_by_name(name):
 
 
 def insert_user(username, email, password, role):
-    user = {'name': name, 'email': email, 'role': role}
+    user = {'username': username, 'email': email, 'role': role}
     studentinfo_collection.insert_one(user)
 
 
