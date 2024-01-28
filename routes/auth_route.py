@@ -7,7 +7,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from auth.authorize import authenticate_user, oauth2_scheme, get_current_user, credentials_exception
 from auth.hashing import get_password_hash, ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token
 from dao.token_dao import blacklist_token
-from services.user_service import user_exists, add_new_student
+from services.user_service import user_exists, add_new_student, add_new_lecturer
 
 router = APIRouter(
     prefix="/api/auth",
