@@ -9,6 +9,6 @@ router = APIRouter(
 
 @router.get("/get-all")
 async def get_all(
-        
+        token: str = Depends(oauth2_scheme)
 ):
 
