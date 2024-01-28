@@ -8,7 +8,8 @@ mydb = client["studentinfo"]
 
 fs = gridfs.GridFS(mydb)
 
-
+def get_all_students_info():
+    pass
 
 
 if __name__ == '__main__':
