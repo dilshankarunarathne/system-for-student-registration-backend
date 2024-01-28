@@ -8,7 +8,12 @@ mydb = client["studentinfo"]
 studentinfo_collection = mydb['user']
 
 
-
+def get_all_users_info():
+    lis = []
+    all_users = studentinfo_collection.find()
+    for user in all_users:
+        lis.append(user)
+    return lis
 
 
 if __name__ == '__main__':
