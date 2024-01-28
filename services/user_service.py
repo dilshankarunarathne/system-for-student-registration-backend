@@ -17,7 +17,7 @@ def add_new_student(username: str, password_hash: str, email: str):
     # TODO: use middleware
     # register_student()
 
-    _add_new_user(username, password_hash, email, 'student')
+    user = _add_new_user(username, password_hash, email, 'student')
     pass
 
 
