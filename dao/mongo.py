@@ -4,13 +4,16 @@ import base64
 
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
 
-mydb = client["studentinfo"]
+mydb = client["student"]
 
 fs = gridfs.GridFS(mydb)
 
 
 def get_all_students_info():
-    pass
+    studentinfo_collection = mydb['studentinfo']
+    all_students = studentinfo_collection.find()
+    for student in all_students:
+        print(student)
 
 
 def get_student_info_by_id(id):
@@ -30,4 +33,4 @@ def store_student_capture(student_id, image):
 
 
 if __name__ == '__main__':
-    pass
+    get_all_students_info()
