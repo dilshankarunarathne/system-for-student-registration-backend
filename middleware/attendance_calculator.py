@@ -11,4 +11,4 @@ def get_percentage(attendance_data):
         ext = final_percentage - 0.80
         ext_type = "excess"
 
-    return final_percentage
+    return final_percentage, ext, ext_type
