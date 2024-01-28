@@ -10,6 +10,7 @@ def blacklist_token(token):
     _id = _get_next_id()
     blacklist_collection.insert_one(
         {
+            'id': _id,
             'token': token
         }
     )
