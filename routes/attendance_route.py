@@ -65,7 +65,11 @@ async def attendance_info_for_student(
     if await get_current_user(token) is None:
         raise credentials_exception
 
-    return get_attendance_info_for_student(student_id)
+    attendance = get_attendance_info_for_student(student_id)
+
+    (final_percentage, ext, ext_type) = get_percentage(attendance)
+
+    return {"attendance": attendance, "percentage": final_percentage, "ext": ext, "ext_type": ext_type}
 
 
 @router.post("/get-lecture")
