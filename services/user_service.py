@@ -16,7 +16,8 @@ def add_new_user(username: str, password_hash: str, email: str, role: str):
             }
 
 
-
+def _add_new_student():
+    pass
 
 
 def user_exists(username: str) -> bool:
