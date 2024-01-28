@@ -16,5 +16,8 @@ def get_student_info_by_id(id):
     pass
 
 
+def search_student_info_by_name(name):
+
+
 if __name__ == '__main__':
     pass
