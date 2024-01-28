@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
-from services.student_service import all_student_info
+from services.student_service import all_student_info, student_info_by_id
 
 router = APIRouter(
     prefix="/api/student",
@@ -39,4 +39,4 @@ async def get_by_id(
     if user is None:
         raise credentials_exception
 
-    return all_student_info(_id)
+    return student_info_by_id(_id)
