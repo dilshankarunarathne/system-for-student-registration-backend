@@ -14,6 +14,8 @@ router = APIRouter(
 async def clear_all_records(
         token: str = Depends(oauth2_scheme)
 ):
+    user = get_current_user(token)
+    
     if user is None:
         raise credentials_exception
 
