@@ -20,3 +20,6 @@ def insert_student(student_name, student_year, reg_no, _u_id):
 
 
 def get_student_info_by_id(student_id):
+    filt = {'id': student_id}
+    student = user_collection.find_one(filt)
+    return student
