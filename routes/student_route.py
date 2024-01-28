@@ -27,3 +27,23 @@ async def get_all(
         )
 
     return all_student_info()
+
+
+@router.get("/get-by-id")
+async def get_by_id(
+        _id: str,
+        token: str = Depends(oauth2_scheme)
+):
+    user = await get_current_user(token)
+
+    if user is None:
+        raise credentials_exception
+
+    if user["role"] != "lecturer":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Only lecturers can clear attendance records",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    return all_student_info(_id)
