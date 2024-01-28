@@ -9,5 +9,6 @@ def get_percentage(attendance_data):
         ext_type = "shortage"
     elif final_percentage > 0.80:
         ext = final_percentage - 0.80
+        ext_type = "excess"
 
     return final_percentage
