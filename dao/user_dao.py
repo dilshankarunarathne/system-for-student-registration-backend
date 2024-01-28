@@ -29,7 +29,8 @@ def search_user_info_by_name(name):
 
 
 def insert_user(name, email, password, role):
-    
+    user = {'name': name, 'email': email, 'password': password, 'role': role}
+    studentinfo_collection.insert_one(user)
 
 
 if __name__ == '__main__':
