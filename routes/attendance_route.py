@@ -10,6 +10,9 @@ router = APIRouter(
 )
 
 
+
+
+
 @router.post("/clear")
 async def clear_all_records(
         token: str = Depends(oauth2_scheme)
