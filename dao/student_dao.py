@@ -7,6 +7,9 @@ user_collection = mydb['student']
 
 
 def get_student_info_by_id(_id):
+    filt = {'id': _id}
+    student = user_collection.find_one(filt)
+    return student
 
 
 def insert_student(student_name, student_year, reg_no, _u_id):
