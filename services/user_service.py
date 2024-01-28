@@ -16,6 +16,9 @@ def add_new_user(username: str, password_hash: str, email: str, role: str):
             }
 
 
+
+
+
 def user_exists(username: str) -> bool:
     if get_user(username) is None:
         return False
