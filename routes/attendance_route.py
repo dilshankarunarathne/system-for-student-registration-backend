@@ -79,6 +79,6 @@ async def attendance_info_for_class(
     attendance = get_attendance_info_for_lecture(course_id, date)
 
     # TODO: use middleware to get stats
-    get_percentage(attendance)
+    stats = get_percentage(attendance)
 
     return
