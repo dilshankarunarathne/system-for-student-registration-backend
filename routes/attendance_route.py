@@ -14,7 +14,7 @@ router = APIRouter(
 async def clear_all_records(
         token: str = Depends(oauth2_scheme)
 ):
-    if get_current_user(token) is None:
+    if  is None:
         raise credentials_exception
 
     if get_role(token) != "admin":
