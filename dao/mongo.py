@@ -21,7 +21,8 @@ def search_student_info_by_name(name):
     pass
 
 
-
+def insert_student_info(student_info):
+    pass
 
 
 if __name__ == '__main__':
