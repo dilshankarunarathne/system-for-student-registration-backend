@@ -5,3 +5,6 @@ def all_student_info():
     students = get_all_students()
     print(students)
     return students
+
+
+
