@@ -6,6 +6,8 @@ def add_new_user(username: str, password: str, email: str, role: str):
     # TODO: use middleware
     register_student()
 
+    password_hash = password
+
     return insert_user(username, password_hash, email, role)
 
 
