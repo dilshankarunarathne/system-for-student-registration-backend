@@ -6,7 +6,7 @@ mydb = client["studentinfo"]
 user_collection = mydb['attendance']
 
 
-
+def 
 
 
 if __name__ == '__main__':
