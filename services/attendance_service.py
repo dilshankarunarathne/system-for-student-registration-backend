@@ -1,4 +1,4 @@
-from dao.attendance_dao import query_attendance_info_for_student, query_attendance_info_for_class
+from dao.attendance_dao import query_attendance_info_for_student, query_attendance_info_for_class, delete_all_documents
 
 
 def get_attendance_info_for_student(student_id):
