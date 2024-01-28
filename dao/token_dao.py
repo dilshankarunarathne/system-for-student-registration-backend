@@ -7,6 +7,7 @@ blacklist_collection = mydb['blacklist']
 
 
 def blacklist_token(token):
+    _id = _get_next_id()
     blacklist_collection.insert_one({'token': token})
 
 
