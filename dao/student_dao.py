@@ -11,7 +11,8 @@ def insert_student(student_id, student_name, student_email, student_course, stud
         'id': _id,
         'name': student_name,
         'academic_year': student_year,
-        'reg_no': student_semester
+        'reg_no': student_semester,
+        'u_id': _u_id
     }
     user_collection.insert_one(student)
     return student
