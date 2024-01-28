@@ -34,8 +34,8 @@ async def register_student(
     return add_new_user(username, hashed_password, email, role)
 
 
-@router.post("/register-student")
-async def register_user(
+@router.post("/register-lecturer")
+async def register_lecturer(
         username: str = Form(...),
         email: str = Form(...),
         password: str = Form(...),
