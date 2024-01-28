@@ -11,6 +11,25 @@ router = APIRouter(
 
 
 @router.post("/mark")
+async def mark_attendance(
+        course_id: str = Form(...),
+        date: str = Form(...),
+        student_id: str = Form(...),
+        token: str = Depends(oauth2_scheme)
+):
+    user = get_current_user(token)
+
+    if user is None:
+        raise credentials_exception
+
+    if user["role"] != "lecturer":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Only lecturers can mark attendance",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    return mark_attendance(course_id, date, student_id)
 
 
 @router.post("/clear")
