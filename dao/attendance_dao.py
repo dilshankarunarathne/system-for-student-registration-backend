@@ -23,5 +23,6 @@ def delete_all_documents():
     return result.deleted_count
 
 
-if __name__ == '__main__':
-    print()
+def query_mark_attendance(attendance_info):
+    result = attendance_collection.insert_one(attendance_info)
+    return result.inserted_id
