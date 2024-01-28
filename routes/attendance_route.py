@@ -17,7 +17,7 @@ async def clear_all_records(
     if get_current_user(token) is None:
         raise credentials_exception
 
-    
+    if get_role()
 
     return clear_all_records()
 
