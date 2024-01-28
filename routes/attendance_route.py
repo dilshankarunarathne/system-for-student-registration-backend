@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Form
 
-from services.attendance_service import get_attendance_info_for_lecture
+from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student
 
 router = APIRouter(
     prefix="/api/attendance",
