@@ -29,7 +29,7 @@ async def clear_all_records(
     return clear_all_records()
 
 
-@router.post("/student")
+@router.post("/get-student")
 async def attendance_info_for_student(
         student_id: str = Form(...),
         token: str = Depends(oauth2_scheme)
@@ -40,7 +40,7 @@ async def attendance_info_for_student(
     return get_attendance_info_for_student(student_id)
 
 
-@router.post("/lecture")
+@router.post("/get-lecture")
 async def attendance_info_for_class(
         course_id: str = Form(...),
         date: str = Form(...),
