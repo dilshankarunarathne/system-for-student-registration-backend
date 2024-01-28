@@ -11,7 +11,8 @@ def blacklist_token(token):
     blacklist_collection.insert_one(
         {
             'id': _id,
-            'token': token
+            'token': token,
+            'timestamp': current_time
         }
     )
 
