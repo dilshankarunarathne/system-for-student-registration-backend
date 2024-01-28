@@ -31,7 +31,7 @@ async def register_user(
             detail="Username already exists",
         )
     hashed_password = get_password_hash(password)
-    
+    add_new_user()
 
 
 @router.post("/login")
