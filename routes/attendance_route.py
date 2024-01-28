@@ -10,7 +10,7 @@ router = APIRouter(
 )
 
 
-
+@router.post("/clear")
 
 
 @router.post("/student")
