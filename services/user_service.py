@@ -16,7 +16,7 @@ def user_exists(username: str) -> bool:
 
 
 def get_role():
-    return 
+    return get_role_by_id(u_id)
 
 
 def get_user(username: str):
