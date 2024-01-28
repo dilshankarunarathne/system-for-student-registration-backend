@@ -12,6 +12,7 @@ router = APIRouter(
 @router.post("/student")
 async def attendance_info_for_student(
         student_id: str = Form(...),
+        token: str = Depends(oauth2_scheme)
 ):
     return get_attendance_info_for_student(student_id)
 
