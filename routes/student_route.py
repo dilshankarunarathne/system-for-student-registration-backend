@@ -39,11 +39,4 @@ async def get_by_id(
     if user is None:
         raise credentials_exception
 
-    if user["role"] != "lecturer":
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Only lecturers can access records",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-
     return all_student_info(_id)
