@@ -76,30 +76,8 @@ def put_image(name, file, gender, age):
     return str(image_id)
 
 
-def reformat_age(age):
-    send_age = ""
-    if age == "(0-2)":
-        send_age = "4-14"
-    elif age == "(4-6)":
-        send_age = "4-14"
-    elif age == "(8-12)":
-        send_age = "4-14"
-    elif age == "(15-20)":
-        send_age = "13-26"
-    elif age == "(25-32)":
-        send_age = "27-40"
-    elif age == "(38-43)":
-        send_age = "27-40"
-    elif age == "(48-53)":
-        send_age = "Above 40"
-    elif age == "(60-100)":
-        send_age = "Above 40"
-
-    return send_age
-
-
 def fetch_ad_images(age_unformatted, gender):
-    age = reformat_age(age_unformatted)
+    age = age_unformatted
 
     pipeline = [
         {'$match': {'gender': gender, 'age': age}},
