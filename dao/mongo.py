@@ -13,6 +13,7 @@ def get_all_students_info():
 
 
 def get_student_info_by_id(id):
+    pass
 
 
 if __name__ == '__main__':
