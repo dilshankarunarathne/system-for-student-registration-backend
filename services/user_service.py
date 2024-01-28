@@ -20,6 +20,13 @@ def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_nam
     lecturer = insert_lecturer(lecturer_name, _u_id)
 
     if user and lecturer:
+        return \
+            {
+                "message": "operation successful",
+                "user_id": user['id'],
+                "lecturer_id": lecturer['id'],
+                "username": user['username']
+            }
 
 
 def add_new_student(username: str, password_hash: str, email: str, student_name: str, student_year: str, reg_no: str):
