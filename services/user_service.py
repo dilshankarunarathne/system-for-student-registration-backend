@@ -2,7 +2,7 @@ from dao.user_dao import search_user_info_by_name, get_user_info_by_id, insert_u
 from middleware.student_registration import register_student
 
 
-def add_new_user(username: str, password_hash: str, email: str, role: str):
+def _add_new_user(username: str, password_hash: str, email: str, role: str):
     # TODO: use middleware
     # register_student()
 
@@ -16,7 +16,7 @@ def add_new_user(username: str, password_hash: str, email: str, role: str):
             }
 
 
-def _add_new_student():
+def add_new_student():
     pass
 
 
