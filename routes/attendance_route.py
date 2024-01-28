@@ -28,7 +28,10 @@ async def mark_single_attendance(
 
     date = datetime.now().strftime("%d/%m/%Y")
 
-    return mark_attendance(student_id, course_id, date, attended_time, total_time)
+    attendance = mark_attendance(student_id, course_id, date, attended_time, total_time)
+    print(attendance)
+
+    return {"operation": "successful", "attendance": attendance}
 
 
 @router.post("/clear")
