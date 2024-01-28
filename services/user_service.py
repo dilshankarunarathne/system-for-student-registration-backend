@@ -14,7 +14,7 @@ def _add_new_user(username: str, password_hash: str, email: str, role: str):
             }
 
 
-def add_new_student(username: str, password_hash: str, email: str, role: str, student_name: str, student_year: str):
+def add_new_student(username: str, password_hash: str, email: str, student_name: str, student_year: str):
     # TODO: use middleware
     # register_student()
 
