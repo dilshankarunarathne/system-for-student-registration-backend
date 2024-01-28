@@ -10,4 +10,7 @@ def blacklist_token(token):
     user_collection.insert_one({'token': token})
 
 
-
+def _get_next_id():
+    last_user = user_collection.find().sort('id', -1).limit(1)
+    for user in last_user:
+        return user['id'] + 1
