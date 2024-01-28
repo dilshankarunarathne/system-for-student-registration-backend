@@ -14,7 +14,7 @@ from services.user_service import user_exists, add_new_user
 router = APIRouter(
     prefix="/api/auth",
     tags=["auth"],
-    responses={404: {"description": "The requested page was not found"}},
+    responses={404: {"description": "The requested url was not found"}},
 )
 
 
