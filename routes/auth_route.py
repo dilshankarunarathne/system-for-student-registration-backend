@@ -64,7 +64,7 @@ async def register_lecturer(
 
     hashed_password = get_password_hash(password)
 
-    return add_new_user(username, hashed_password, email, role)
+    return add_new_lecturer(username, hashed_password, email, role)
 
 
 
