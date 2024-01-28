@@ -28,7 +28,8 @@ def search_user_info_by_name(name):
     return user
 
 
-def insert_user(user_info):
+def insert_user(name, email, password, role):
+    
 
 
 if __name__ == '__main__':
