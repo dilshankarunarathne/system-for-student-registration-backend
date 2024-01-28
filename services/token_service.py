@@ -1,4 +1,4 @@
-from dao.token_dao import blacklist_token
+from dao.token_dao import blacklist_token, is_token_blacklisted
 
 
 def add_token_to_blacklist(token: str):
