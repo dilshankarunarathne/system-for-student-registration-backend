@@ -13,3 +13,11 @@ def get_lecturer_info_by_uid(_u_id):
 
 
 def insert_lecturer(lecturer_name, _u_id):
+    _id = _get_next_lecturer_id()
+    lecturer = {
+        'id': _id,
+        'name': lecturer_name,
+        'u_id': _u_id
+    }
+    lecturer_collection.insert_one(lecturer)
+    return lecturer
