@@ -26,6 +26,9 @@ def delete_all_documents():
     return result.deleted_count
 
 
+
+
+
 def query_mark_attendance(attendance_info):
     _id = _get_next_id()
     attendance_info['id'] = _id
