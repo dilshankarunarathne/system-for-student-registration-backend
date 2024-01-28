@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import pymongo
 
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
@@ -9,7 +11,7 @@ blacklist_collection = mydb['blacklist']
 def blacklist_token(token):
     _id = _get_next_id()
     current_time = datetime.now()
-    
+
     blacklist_collection.insert_one(
         {
             'id': _id,
