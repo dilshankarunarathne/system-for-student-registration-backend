@@ -29,11 +29,3 @@ def create_access_token(data: dict, expires_delta: int = None):
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
-
-
-def blacklist_token(token):
-    add_token_to_blacklist(token)
-
-
-def is_token_blacklisted(token):
-    return check_if_token_is_blacklisted(token)
