@@ -1,5 +1,4 @@
-from fastapi import APIRouter, Form, Depends, HTTPException
-from rest_framework import status
+from fastapi import APIRouter, Form, Depends, HTTPException, status
 
 from auth.authorize import credentials_exception, oauth2_scheme, get_current_user
 from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student
