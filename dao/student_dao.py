@@ -5,3 +5,5 @@ client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluste
 mydb = client["studentinfo"]
 user_collection = mydb['student']
 
+
+
