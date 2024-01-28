@@ -34,6 +34,25 @@ async def register_user(
     return add_new_user(username, hashed_password, email, role)
 
 
+@router.post("/register-student")
+async def register_user(
+        username: str = Form(...),
+        email: str = Form(...),
+        password: str = Form(...),
+        role: str = Form(...)
+):
+    if user_exists(username):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Username already exists",
+        )
+
+    hashed_password = get_password_hash(password)
+
+    return add_new_user(username, hashed_password, email, role)
+
+
+
 @router.post("/login")
 async def login_for_access_token(
         form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
