@@ -52,7 +52,7 @@ async def login_for_access_token(
         # Unresolved attribute reference 'username' for class 'bool'
     )
 
-    return {"access token": access_token, "token_type": "bearer"}
+    return {"access token": access_token, "token type": "bearer"}
 
 
 @router.post("/logout")
