@@ -20,10 +20,11 @@ async def clear_all_records(
     if user is None:
         raise credentials_exception
 
-    if get_role(user) != "lecturer":
+    if user["role"] != "lecturer":
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="You are not authorized to perform this operation",
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Only lecturers can clear attendance records",
+            headers={"WWW-Authenticate": "Bearer"},
         )
 
     return clear_all_records()
