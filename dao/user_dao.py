@@ -26,7 +26,7 @@ def search_user_info_by_name(name):
     return user
 
 
-def insert_user(username, email, password, role):
+def insert_user(username, email, password_hash, role):
     user = {
         'id': _get_last_user_id() + 1,
         'username': username,
