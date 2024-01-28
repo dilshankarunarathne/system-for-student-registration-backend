@@ -30,7 +30,7 @@ async def mark_single_attendance(
 
     doc_id, _id = mark_attendance(student_id, course_id, date, attended_time, total_time)
 
-    return {"message": "operation successful", "attendance marked": attendance["id"]}
+    return {"message": "operation successful", "attendance marked": _id}
 
 
 @router.post("/clear")
