@@ -31,5 +31,8 @@ def insert_user(username, email, password, role):
     user_collection.insert_one(user)
 
 
+
+
+
 if __name__ == '__main__':
     print(get_all_users_info())
