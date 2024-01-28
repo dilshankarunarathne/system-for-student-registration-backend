@@ -1,3 +1,4 @@
+from dao.student_dao import insert_student
 from dao.user_dao import search_user_info_by_name, get_user_info_by_id, insert_user, get_role_by_id
 from middleware.student_registration import register_student
 
