@@ -31,7 +31,6 @@ def insert_user(username, email, password, role):
         'id': _get_last_user_id() + 1,
         'username': username,
         'email': email,
-        'password': password,
         'role': role
     }
     user_collection.insert_one(user)
