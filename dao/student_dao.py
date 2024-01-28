@@ -6,7 +6,9 @@ mydb = client["studentinfo"]
 student_collection = mydb['student']
 
 
-
+def get_all_students():
+    students = student_collection.find()
+    return students
 
 
 def get_student_info_by_uid(_u_id):
