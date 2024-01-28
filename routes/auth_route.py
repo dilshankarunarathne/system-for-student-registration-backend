@@ -20,7 +20,7 @@ router = APIRouter(
 async def register_student(
         username: str = Form(...),
         email: str = Form(...),
-        password: str = Form(...)
+        password: str = Form(...),
 ):
     if user_exists(username):
         raise HTTPException(
