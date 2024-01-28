@@ -3,12 +3,12 @@ import pymongo
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
 
 mydb = client["studentinfo"]
-user_collection = mydb['student']
+student_collection = mydb['student']
 
 
 def get_student_info_by_uid(_u_id):
     filt = {'u_id': _u_id}
-    student = user_collection.find_one(filt)
+    student = student_collection.find_one(filt)
     return student
 
 
@@ -21,11 +21,11 @@ def insert_student(student_name, student_year, reg_no, _u_id):
         'reg_no': reg_no,
         'u_id': _u_id
     }
-    user_collection.insert_one(student)
+    student_collection.insert_one(student)
     return student
 
 
 def _get_next_student_id():
-    last_student = user_collection.find().sort('id', -1).limit(1)
+    last_student = student_collection.find().sort('id', -1).limit(1)
     for student in last_student:
         return student['id'] + 1
