@@ -12,5 +12,8 @@ def get_attendance_info_for_student(student_id):
     return attendance
 
 
+
+
+
 if __name__ == '__main__':
     print()
