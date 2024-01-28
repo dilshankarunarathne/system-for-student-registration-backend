@@ -16,6 +16,7 @@ def user_exists(username: str) -> bool:
 
 
 def get_role():
+    pass
 
 
 def get_user(username: str):
