@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Depends
 
+from auth.authorize import oauth2_scheme
+
 router = APIRouter(
     prefix="/api/student",
     tags=["attendance"],
