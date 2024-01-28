@@ -6,4 +6,4 @@ router = APIRouter(
     responses={404: {"description": "The requested url was not found"}},
 )
 
-
+@router.post("/student")
