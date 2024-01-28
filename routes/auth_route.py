@@ -17,7 +17,7 @@ router = APIRouter(
 
 
 @router.post("/register-student")
-async def register_user(
+async def register_student(
         username: str = Form(...),
         email: str = Form(...),
         password: str = Form(...),
