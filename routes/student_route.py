@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from auth.authorize import oauth2_scheme, get_current_user
+from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
 
 router = APIRouter(
     prefix="/api/student",
