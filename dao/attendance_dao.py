@@ -12,7 +12,7 @@ def query_attendance_info_for_student(student_id):
     return attendance
 
 
-def get_attendance_info_for_class(course_id, date):
+def query_attendance_info_for_class(course_id, date):
     filt = {'course_id': course_id, 'date': date}
     attendance = user_collection.find_one(filt)
     return attendance
