@@ -4,7 +4,7 @@ from typing import Annotated
 from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
-from auth.authorize import authenticate_user, oauth2_scheme
+from auth.authorize import authenticate_user, oauth2_scheme, get_current_user
 from auth.hashing import get_password_hash, ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token
 from dao.token_dao import blacklist_token
 from services.user_service import user_exists
@@ -37,7 +37,7 @@ async def register_student(
             detail="Only lecturers can clear attendance records",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    
+
     if user_exists(username):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
