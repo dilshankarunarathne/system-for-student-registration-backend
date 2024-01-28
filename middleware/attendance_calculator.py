@@ -5,6 +5,6 @@ def get_percentage(attendance_data):
 
     final_percentage = sum(current_percentage) / len(current_percentage)
     if final_percentage < 0.80:
-        return False
+        need = 0.80 - final_percentage
 
     return final_percentage
