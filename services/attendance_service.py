@@ -16,7 +16,6 @@ def clear_all_records():
 
 def mark_attendance(student_id, course_id, date, attended_time, total_time):
     attendance_info = get_attendance_info_for_lecture(course_id, date)
-    _id = _get_last_id()
     if attendance_info is None:
         attendance_info = {
             'id': None,
