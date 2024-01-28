@@ -82,4 +82,4 @@ async def attendance_info_for_class(
     # TODO: use middleware to get stats
     (final_percentage, ext, ext_type) = get_percentage(attendance)
 
-    return
+    return {"attendance": attendance, "percentage": final_percentage, "ext": ext, "ext_type": ext_type}
