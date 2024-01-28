@@ -48,7 +48,3 @@ def _get_last_user_id():
     last_user = user_collection.find().sort('id', -1).limit(1)
     for user in last_user:
         return user['id']
-
-
-if __name__ == '__main__':
-    print(_get_last_user_id())
