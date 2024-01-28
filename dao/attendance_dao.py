@@ -19,7 +19,8 @@ def query_attendance_info_for_class(course_id, date):
 
 
 def delete_all_documents():
-    attendance_collection.delete_many({})
+    result = attendance_collection.delete_many({})
+    return result.deleted_count
 
 
 if __name__ == '__main__':
