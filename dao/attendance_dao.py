@@ -6,7 +6,7 @@ mydb = client["studentinfo"]
 attendance_collection = mydb['attendance']
 
 
-def query_attendance_info_for_student(student_id):
+def query_attendance_info_for_student(student_id):  # TODO: bug - user and student collections
     filt = {'student_id': student_id}
     attendance = attendance_collection.find_one(filt)
     return attendance
