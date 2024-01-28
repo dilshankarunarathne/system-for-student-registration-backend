@@ -7,8 +7,6 @@ client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluste
 mydb = client["studentinfo"]
 studentinfo_collection = mydb['studentinfo']
 
-fs = gridfs.GridFS(mydb)
-
 
 def get_all_students_info():
     studentinfo_collection = mydb['studentinfo']
