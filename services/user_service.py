@@ -1,4 +1,5 @@
 from config import config
+from dao.user_dao import search_user_info_by_name
 from models.user_model import User
 
 
