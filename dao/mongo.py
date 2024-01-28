@@ -23,7 +23,9 @@ def get_student_info_by_id(s_id):
 
 
 def search_student_info_by_name(name):
-    pass
+    filt = {'name': name}
+    student = studentinfo_collection.find_one(filt)
+    return student
 
 
 def insert_student_info(student_info):
