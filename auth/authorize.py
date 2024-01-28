@@ -7,7 +7,7 @@ from jose import JWTError, jwt
 
 import config
 from models.token_model import TokenData
-from auth.hashing import verify_password, is_token_blacklisted, SECRET_KEY, ALGORITHM
+from auth.hashing import verify_password, SECRET_KEY, ALGORITHM
 from services.user_service import get_user
 
 tokenUrl = config.get("auth", "auth.tokenurl")
