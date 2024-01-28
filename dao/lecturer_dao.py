@@ -22,6 +22,7 @@ def insert_lecturer(lecturer_name, _u_id):
     lecturer_collection.insert_one(lecturer)
     return lecturer
 
+
 def _get_next_lecturer_id():
     last_lecturer = lecturer_collection.find().sort('id', -1).limit(1)
     for lecturer in last_lecturer:
