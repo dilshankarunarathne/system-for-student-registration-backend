@@ -11,7 +11,7 @@ router = APIRouter(
 async def get_attendance_info_for_student(
         student_id: str = Form(...),
 ):
-    return 
+    return get_attendance_info_for_student(student_id)
 
 
 @router.post("/lecture")
