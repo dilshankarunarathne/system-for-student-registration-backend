@@ -1,20 +1,4 @@
-from config import config
-from models.user_model import User
-
-from dao.user_dao import UserDAO
-
-dao = UserDAO(
-    host=config.get("database", "database.host"),
-    user=config.get("database", "database.user"),
-    password=config.get("database", "database.password"),
-    database=config.get("database", "database.dbname")
-)
-try:
-    dao.connect()
-    print("Herb DB connection successful")
-except Exception as e:
-    print("Herb DB (user) connection error:", e)
-
+from models.user import User
 
 def add_new_user(user: User):
     dao.create_user(user)
