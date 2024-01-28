@@ -21,7 +21,7 @@ def get_user_info_by_id(u_id):
 
 
 def search_user_info_by_name(name):
-    filt = {'name': name}
+    filt = {'username': name}
     user = user_collection.find_one(filt)
     return user
 
