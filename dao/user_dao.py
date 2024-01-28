@@ -12,4 +12,4 @@ studentinfo_collection = mydb['student']
 
 
 if __name__ == '__main__':
-    get_all_students_info()
+    pass
