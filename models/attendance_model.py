@@ -7,3 +7,4 @@ class Attendance(BaseModel):
     course_id: int
     date: str
     attended_time: int
+    total_time: int
