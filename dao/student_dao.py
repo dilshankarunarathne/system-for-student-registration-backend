@@ -6,8 +6,8 @@ mydb = client["studentinfo"]
 user_collection = mydb['student']
 
 
-def get_student_info_by_id(_id):
-    filt = {'id': _id}
+def get_student_info_by_uid(_u_id):
+    filt = {'u_id': _u_id}
     student = user_collection.find_one(filt)
     return student
 
