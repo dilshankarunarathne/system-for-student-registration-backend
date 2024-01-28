@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Form
+from fastapi import APIRouter, Form, Depends
 
 from auth.authorize import credentials_exception
 from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student
