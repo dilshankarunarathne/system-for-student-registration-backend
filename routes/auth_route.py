@@ -46,7 +46,7 @@ async def register_student(
 
     hashed_password = get_password_hash(password)
 
-    return add_new_user(username, hashed_password, email, role)
+    return add_new_student(username, hashed_password, email, role)
 
 
 @router.post("/register-lecturer")
