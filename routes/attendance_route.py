@@ -14,7 +14,8 @@ async def attendance_info_for_student(
         student_id: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
-    
+    if get_current_user(token) is None:
+        raise credentials_exception
     return get_attendance_info_for_student(student_id)
 
 
