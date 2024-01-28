@@ -22,7 +22,10 @@ def get_user_info_by_id(s_id):
     return user
 
 
-
+def search_user_info_by_name(name):
+    filt = {'name': name}
+    user = studentinfo_collection.find_one(filt)
+    return user
 
 
 if __name__ == '__main__':
