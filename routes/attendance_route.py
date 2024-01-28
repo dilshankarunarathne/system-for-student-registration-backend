@@ -37,7 +37,7 @@ async def mark_single_attendance(
 async def clear_all_records(
         token: str = Depends(oauth2_scheme)
 ):
-    user = get_current_user(token)
+    user = await get_current_user(token)
 
     if user is None:
         raise credentials_exception
@@ -57,7 +57,7 @@ async def attendance_info_for_student(
         student_id: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
-    if get_current_user(token) is None:
+    if await get_current_user(token) is None:
         raise credentials_exception
 
     return get_attendance_info_for_student(student_id)
