@@ -14,8 +14,7 @@ def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_nam
             {
                 "message": "operation successful",
                 "user_id": user['id'],
-                "lecturer_id": lecturer['id'],
-                "username": user['username']
+                "lecturer_id": lecturer['id']
             }
 
 
