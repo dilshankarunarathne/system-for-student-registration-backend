@@ -7,4 +7,6 @@ router = APIRouter(
 )
 
 
-
+@router.get("/get-all")
+async def get_all_students():
+    pass
