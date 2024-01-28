@@ -25,3 +25,4 @@ async def get_all(
             headers={"WWW-Authenticate": "Bearer"},
         )
 
+    return {"message": "operation successful", "attendance cleared": cur}
