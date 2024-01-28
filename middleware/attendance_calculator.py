@@ -1,5 +1,5 @@
 def get_percentage(attendance_data):
-    current_percentage = 0
+    current_percentage = []
     for i in attendance_data:
-        i['percentage'] = (i['attended_time'] / i['total_time']) * 100
+        current_percentage.append(i['attended_time'] / i['total_time'])
     pass  # TODO
