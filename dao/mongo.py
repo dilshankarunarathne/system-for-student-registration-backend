@@ -15,6 +15,7 @@ def get_all_students_info():
         list.append(student)
     return list
 
+
 def get_student_info_by_id(id):
     pass
 
