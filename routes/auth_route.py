@@ -38,7 +38,6 @@ async def register_lecturer(
         username: str = Form(...),
         email: str = Form(...),
         password: str = Form(...),
-        role: str = Form(...)
 ):
     if user_exists(username):
         raise HTTPException(
