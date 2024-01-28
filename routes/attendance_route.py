@@ -76,6 +76,9 @@ async def attendance_info_for_class(
     if await get_current_user(token) is None:
         raise credentials_exception
 
-    # TODO: use middleware to get stats
+    get_attendance_info_for_lecture(course_id, date)
 
-    return get_attendance_info_for_lecture(course_id, date)
+    # TODO: use middleware to get stats
+    get_percentage()
+
+    return
