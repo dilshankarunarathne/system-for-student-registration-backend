@@ -1,4 +1,5 @@
 import pymongo
+from bson import json_util
 
 client = pymongo.MongoClient("mongodb+srv://cluster-user:WSamCRFjm47IjoNT@cluster0.nwgoyl7.mongodb.net/")
 
@@ -6,9 +7,10 @@ mydb = client["studentinfo"]
 attendance_collection = mydb['attendance']
 
 
-def query_attendance_info_for_student(student_id):  # TODO: bug - user and student collections
+def query_attendance_info_for_student(student_id):
     filt = {'student_id': student_id}
     attendance = attendance_collection.find_one(filt)
+    attendance['_id'] = str(attendance['_id'])
     return attendance
 
 
