@@ -25,5 +25,8 @@ def insert_student_info(student_info):
     pass
 
 
+def update_student_info(student_info):
+
+
 if __name__ == '__main__':
     pass
