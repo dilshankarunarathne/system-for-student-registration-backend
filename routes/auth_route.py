@@ -22,6 +22,7 @@ async def register_student(
         email: str = Form(...),
         password: str = Form(...),
         student_name: str = Form(...),
+        student_year: str = Form(...),
 ):
     if user_exists(username):
         raise HTTPException(
