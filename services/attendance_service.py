@@ -29,6 +29,3 @@ def mark_attendance(student_id, course_id, date, attended_time, total_time):
     else:
         raise Exception("Attendance already marked for this lecture")
     return query_mark_attendance(attendance_info)
-
-
-
