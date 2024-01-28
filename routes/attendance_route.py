@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Form
 
+from auth.authorize import credentials_exception
 from services.attendance_service import get_attendance_info_for_lecture, get_attendance_info_for_student
 
 router = APIRouter(
@@ -16,7 +17,7 @@ async def attendance_info_for_student(
 ):
     if get_current_user(token) is None:
         raise credentials_exception
-    
+
     return get_attendance_info_for_student(student_id)
 
 
