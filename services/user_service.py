@@ -1,4 +1,6 @@
-from models.user import User
+from config import config
+from models.user_model import User
+
 
 def add_new_user(user: User):
     dao.create_user(user)
