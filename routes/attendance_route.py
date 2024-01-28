@@ -13,8 +13,8 @@ router = APIRouter(
 @router.post("/mark")
 async def mark_attendance(
         course_id: str = Form(...),
-        date: str = Form(...),
         student_id: str = Form(...),
+        date: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
     user = get_current_user(token)
