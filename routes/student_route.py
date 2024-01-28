@@ -22,7 +22,7 @@ async def get_all(
     if user["role"] != "lecturer":
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Only lecturers can clear attendance records",
+            detail="Only lecturers can access records",
             headers={"WWW-Authenticate": "Bearer"},
         )
 
@@ -42,7 +42,7 @@ async def get_by_id(
     if user["role"] != "lecturer":
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Only lecturers can clear attendance records",
+            detail="Only lecturers can access records",
             headers={"WWW-Authenticate": "Bearer"},
         )
 
