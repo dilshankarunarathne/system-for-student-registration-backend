@@ -38,7 +38,7 @@ def insert_user(username, password_hash, email, role):
     return user
 
 
-
+def get_role_by_id(user_id):
 
 
 def _get_last_user_id():
