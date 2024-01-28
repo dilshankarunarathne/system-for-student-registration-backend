@@ -24,7 +24,7 @@ async def register_student(
         student_name: str = Form(...),
         student_year: str = Form(...),
         reg_no: str = Form(...),
-        
+        token: str = Depends(oauth2_scheme)
 ):
     if user_exists(username):
         raise HTTPException(
