@@ -11,7 +11,7 @@ router = APIRouter(
 
 
 @router.post("/mark")
-async def mark_attendance(
+async def mark_single_attendance(
         course_id: str = Form(...),
         student_id: str = Form(...),
         date: str = Form(...),
