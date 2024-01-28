@@ -26,8 +26,7 @@ def add_new_student(username: str, password_hash: str, email: str, student_name:
         return \
             {
                 "message": "operation successful",
-                "user": user['user'],
-                "id": user['id'],
+                "user_id": user['id'],
                 "student": student['name'],
                 "student_id": student['id']
             }
