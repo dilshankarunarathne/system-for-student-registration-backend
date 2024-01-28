@@ -29,7 +29,7 @@ def search_student_info_by_name(name):
 
 
 def insert_student_info(student_info):
-    pass
+    studentinfo_collection.insert_one(student_info)
 
 
 def store_student_capture(student_id, image):
