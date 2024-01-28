@@ -18,3 +18,6 @@ def user_exists(username: str) -> bool:
 
 def get_user(username: str):
     pass
+
+
+
