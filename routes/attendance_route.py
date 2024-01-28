@@ -20,7 +20,7 @@ async def clear_all_records(
     if user is None:
         raise credentials_exception
 
-    if get_role(user) != "admin":
+    if get_role(user) != "lecturer":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You are not authorized to perform this operation",
