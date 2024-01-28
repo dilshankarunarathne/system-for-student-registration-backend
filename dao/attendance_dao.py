@@ -18,5 +18,9 @@ def query_attendance_info_for_class(course_id, date):
     return attendance
 
 
+def clear_all_records():
+    user_collection.delete_many({})
+
+
 if __name__ == '__main__':
     print()
