@@ -22,4 +22,4 @@ def get_user(username: str):
 
 
 def get_user_by_id(user_id: int):
-    return 
+    return get_user_info_by_id(user_id)
