@@ -49,7 +49,10 @@ async def clear_all_records(
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    return clear_all_records()
+    cur = clear_all_records()
+    
+    # TODO: create placeholder _id=1 document
+    return {"message": "operation successful", "attendance cleared": cur}
 
 
 @router.post("/get-student")
