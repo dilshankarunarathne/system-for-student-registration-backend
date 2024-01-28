@@ -4,9 +4,9 @@ from middleware.student_registration import register_student
 
 def add_new_user(username: str, password_hash: str, email: str, role: str):
     # TODO: use middleware
-    register_student()
+    # register_student()
 
-    return insert_user(username, password_hash, email, role)
+    insert_user(username, password_hash, email, role)
 
 
 def user_exists(username: str) -> bool:
