@@ -15,6 +15,7 @@ async def mark_attendance(
         course_id: str = Form(...),
         student_id: str = Form(...),
         date: str = Form(...),
+        timestamp: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
     user = get_current_user(token)
