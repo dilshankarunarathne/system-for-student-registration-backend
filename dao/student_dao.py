@@ -10,7 +10,7 @@ def insert_student(student_id, student_name, student_email, student_course, stud
     student = {
         'id': _id,
         'name': student_name,
-        'student_year': student_year,
+        'academic_year': student_year,
         'student_semester': student_semester
     }
     user_collection.insert_one(student)
