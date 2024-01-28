@@ -7,7 +7,8 @@ def add_new_user(username: str, password_hash: str, email: str, role: str):
     # register_student()
 
     user = insert_user(username, password_hash, email, role)
-    print(user)
+    if user:
+        return {"operation": "successful", "user": user['username']}
 
 
 def user_exists(username: str) -> bool:
