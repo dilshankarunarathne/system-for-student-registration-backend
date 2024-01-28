@@ -17,6 +17,7 @@ def query_attendance_info_for_student(student_id):
 def query_attendance_info_for_class(course_id, date):
     filt = {'course_id': course_id, 'date': date}
     attendance = attendance_collection.find_one(filt)
+    attendance['_id'] = str(attendance['_id'])
     return attendance
 
 
