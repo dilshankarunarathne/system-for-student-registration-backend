@@ -28,5 +28,8 @@ def search_user_info_by_name(name):
     return user
 
 
+def insert_user_info(user_info):
+
+
 if __name__ == '__main__':
     pass
