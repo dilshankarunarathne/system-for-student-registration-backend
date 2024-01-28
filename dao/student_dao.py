@@ -6,6 +6,8 @@ mydb = client["studentinfo"]
 user_collection = mydb['student']
 
 
+
+
 def insert_student(student_name, student_year, reg_no, _u_id):
     _id = _get_next_student_id()
     student = {
