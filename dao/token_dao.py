@@ -22,6 +22,9 @@ def blacklist_token(token):
 
 
 def is_token_blacklisted(token):
+    filt = {'token': token}
+    user = blacklist_collection.find_one(filt)
+    return user is not None
 
 
 def _get_next_id():
