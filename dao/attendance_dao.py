@@ -30,4 +30,5 @@ def query_mark_attendance(attendance_info):
     return result.inserted_id
 
 
-def _get_next_id
+def _get_next_id():
+    return attendance_collection.count_documents({}) + 1
