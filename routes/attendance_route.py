@@ -16,7 +16,7 @@ async def get_attendance_info_for_student(
 
 @router.post("/lecture")
 async def get_attendance_info_for_class(
-        course_id,
+        course_id: str = Form(...),
         date
 ):
     pass
