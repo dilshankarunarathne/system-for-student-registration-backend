@@ -31,6 +31,8 @@ async def register_student(
     if user is None:
         raise credentials_exception
 
+    print(user["role"])
+
     if user["role"] != "lecturer":
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

@@ -5,7 +5,7 @@ from middleware.student_registration import register_student
 
 
 def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_name: str):
-    user = _add_new_user(username, password_hash, email, 'student')
+    user = _add_new_user(username, password_hash, email, 'lecturer')
     _u_id = user['id']
     lecturer = insert_lecturer(lecturer_name, _u_id)
 
