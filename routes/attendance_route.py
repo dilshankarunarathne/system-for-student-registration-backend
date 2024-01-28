@@ -51,7 +51,7 @@ async def clear_all(
 
     cur = clear_all_records()
 
-    # TODO: re-create placeholder _id=1 document
+    create_placeholder_document()
 
     return {"message": "operation successful", "attendance cleared": cur}
 
