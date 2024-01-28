@@ -71,5 +71,5 @@ def fetch_ad_images(age_unformatted, gender):
 
 
 if __name__ == '__main__':
-    print(fs)
+    print(mydb['text'])
 

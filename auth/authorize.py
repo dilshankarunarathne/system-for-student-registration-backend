@@ -5,11 +5,14 @@ from fastapi.security import OAuth2PasswordBearer
 
 from jose import JWTError, jwt
 
+import config
 from models.token_model import TokenData
 from auth.hashing import verify_password, is_token_blacklisted, SECRET_KEY, ALGORITHM
 from services.user_service import get_user
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:8000/auth/login")
+tokenUrl = config.get("auth", "tokenurl")
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl=tokenUrl)
 
 credentials_exception = HTTPException(
     status_code=status.HTTP_401_UNAUTHORIZED,
