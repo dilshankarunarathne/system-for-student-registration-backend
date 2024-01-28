@@ -13,10 +13,11 @@ def _add_new_user(username: str, password_hash: str, email: str, role: str):
             }
 
 
-def add_new_student():
+def add_new_student(username: str, password_hash: str, email: str):
     # TODO: use middleware
     # register_student()
 
+    _add_new_user()
     pass
 
 
