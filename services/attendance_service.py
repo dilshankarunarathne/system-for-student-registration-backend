@@ -13,5 +13,5 @@ def clear_all_records():
     return delete_all_documents()
 
 
-def mark_attendance(student_id, course_id, date, attendance):
-    
+def mark_attendance(student_id, course_id, date, attended_time, total_time):
+
