@@ -33,7 +33,7 @@ def insert_student_info(student_info):
 
 
 def store_student_capture(student_id, image):
-    pass
+    pass  # TODO: Implement this
 
 
 if __name__ == '__main__':
