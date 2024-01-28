@@ -33,7 +33,7 @@ async def register_user(
 
     hashed_password = get_password_hash(password)
 
-    return add_new_user(username, email, role)
+    return add_new_user(username, hashed_password, email, role)
 
 
 @router.post("/login")
