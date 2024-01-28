@@ -4,7 +4,6 @@ from jose import jwt
 from passlib.context import CryptContext
 
 import config
-from services.token_service import add_token_to_blacklist, check_if_token_is_blacklisted
 
 SECRET_KEY = config.get("security", "security.secretkey")
 ALGORITHM = config.get("security", "security.algorithm")
