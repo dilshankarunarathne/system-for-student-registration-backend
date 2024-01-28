@@ -6,7 +6,7 @@ def add_new_user(username: str, password: str, email: str, role: str):
     # TODO: use middleware
     register_student()
 
-    return insert_user(username, password, email, role)
+    return insert_user(username, password_hash, email, role)
 
 
 def user_exists(username: str) -> bool:
