@@ -5,7 +5,7 @@ from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
 from auth.authorize import authenticate_user, oauth2_scheme
-from auth.hashing import get_password_hash, ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token, blacklist_token
+from auth.hashing import get_password_hash, ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token
 from services.user_service import user_exists, add_new_user
 
 router = APIRouter(
