@@ -27,15 +27,21 @@ def search_user_info_by_name(name):
 
 
 def insert_user(username, email, password, role):
-    user = {'username': username, 'email': email, 'role': role}
+    user = {
+        'id': get_last_user_id() + 1,
+        'username': username,
+        'email': email,
+        'password': password,
+        'role': role
+    }
     user_collection.insert_one(user)
 
 
-def get_last_user_id():
+def _get_last_user_id():
     last_user = user_collection.find().sort('id', -1).limit(1)
     for user in last_user:
         return user['id']
 
 
 if __name__ == '__main__':
-    print(get_all_users_info())
+    print(get_last_user_id())
