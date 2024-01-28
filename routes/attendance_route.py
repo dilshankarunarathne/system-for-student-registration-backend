@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter, Form, Depends, HTTPException, status
 
 from auth.authorize import credentials_exception, oauth2_scheme, get_current_user
@@ -24,7 +26,7 @@ async def mark_single_attendance(
     if user is None:
         raise credentials_exception
 
-    
+    date = datetime.now().strftime("%d/%m/%Y")
 
     return mark_attendance(student_id, course_id, date, attended_time, total_time)
 
