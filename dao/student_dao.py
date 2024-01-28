@@ -8,7 +8,7 @@ user_collection = mydb['student']
 
 def insert_student(student_id, student_name, student_email, student_course, student_year, student_semester):
     student = {
-        'student_id': student_id,
+        'id': _id,
         'student_name': student_name,
         'student_email': student_email,
         'student_course': student_course,
