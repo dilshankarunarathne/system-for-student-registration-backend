@@ -19,6 +19,8 @@ def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_nam
     _u_id = user['id']
     lecturer = insert_lecturer(lecturer_name, _u_id)
 
+    if user and lecturer:
+
 
 def add_new_student(username: str, password_hash: str, email: str, student_name: str, student_year: str, reg_no: str):
     # TODO: use middleware
