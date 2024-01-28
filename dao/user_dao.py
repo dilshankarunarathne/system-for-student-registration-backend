@@ -32,4 +32,4 @@ def insert_user(username, email, password, role):
 
 
 if __name__ == '__main__':
-    pass
+    print(get_all_users_info())
