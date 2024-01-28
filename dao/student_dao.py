@@ -8,13 +8,16 @@ student_collection = mydb['student']
 
 
 def get_all_students():
-    students = student_collection.find()
+    students = list(student_collection.find())
+    for student in students:
+        student['_id'] = str(student['_id'])
     return students
 
 
 def get_student_info_by_uid(_u_id):
     filt = {'u_id': _u_id}
     student = student_collection.find_one(filt)
+    print(student['_id'])
     return student
 
 
