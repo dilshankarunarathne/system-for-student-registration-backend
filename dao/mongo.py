@@ -9,7 +9,6 @@ studentinfo_collection = mydb['studentinfo']
 
 
 def get_all_students_info():
-    studentinfo_collection = mydb['studentinfo']
     all_students = studentinfo_collection.find()
     for student in all_students:
         print(student)
