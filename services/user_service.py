@@ -18,7 +18,8 @@ def add_new_student(username: str, password_hash: str, email: str):
     # register_student()
 
     user = _add_new_user(username, password_hash, email, 'student')
-    pass
+
+    student = 
 
 
 def user_exists(username: str) -> bool:
