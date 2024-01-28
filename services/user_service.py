@@ -4,7 +4,6 @@ from dao.user_dao import search_user_info_by_name, get_user_info_by_id, insert_u
 from middleware.student_registration import register_student
 
 
-
 def add_new_lecturer(username: str, password_hash: str, email: str, lecturer_name: str):
     user = _add_new_user(username, password_hash, email, 'student')
     _u_id = user['id']
@@ -50,8 +49,6 @@ def get_user(username: str):
 
 def get_user_by_id(user_id: int):
     return get_user_info_by_id(user_id)
-
-
 
 
 def _add_new_user(username: str, password_hash: str, email: str, role: str):
