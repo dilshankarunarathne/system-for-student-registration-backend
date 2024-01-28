@@ -19,7 +19,7 @@ def add_new_student(username: str, password_hash: str, email: str, student_name:
     # register_student()
 
     user = _add_new_user(username, password_hash, email, 'student')
-
+    _u_id = user['id']
     student = insert_student(student_name, student_year, reg_no, _u_id)
 
 
