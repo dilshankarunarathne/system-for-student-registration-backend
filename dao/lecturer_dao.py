@@ -21,3 +21,6 @@ def insert_lecturer(lecturer_name, _u_id):
     }
     lecturer_collection.insert_one(lecturer)
     return lecturer
+
+
+def _get_next_lecturer_id():
