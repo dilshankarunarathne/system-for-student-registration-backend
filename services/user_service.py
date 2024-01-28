@@ -7,8 +7,7 @@ def add_new_user(username: str, password: str, email: str, role: str):
     # TODO: use middleware
     register_student()
 
-    # TODO: add user to database
-    pass
+    
 
 
 def user_exists(username: str) -> bool:
