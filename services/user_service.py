@@ -13,4 +13,4 @@ def user_exists(username: str) -> bool:
 
 
 def get_user(username: str):
-    return dao.get_user_by_username(username)
+    pass
