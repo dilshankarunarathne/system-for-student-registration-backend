@@ -12,7 +12,8 @@ def get_attendance_info_for_lecture(course_id, date):
     return query_attendance_info_for_class(course_id, date)
 
 
-
+def create_placeholder_document():
+    insert_placeholder_document()
 
 
 def clear_all_records():
