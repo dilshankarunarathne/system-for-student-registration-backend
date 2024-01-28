@@ -17,7 +17,7 @@ def user_exists(username: str) -> bool:
 
 
 def get_user(username: str):
-    pass
+    return search_user_info_by_name(username)
 
 
 def get_user_by_id(user_id: int):
