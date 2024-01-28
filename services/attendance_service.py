@@ -10,4 +10,4 @@ def get_attendance_info_for_lecture(course_id, date):
 
 
 def clear_all_records():
-    delete_all_documents()
+    return delete_all_documents()
