@@ -26,4 +26,7 @@ async def attendance_info_for_class(
         course_id: str = Form(...),
         date: str = Form(...),
 ):
+    if get_current_user(token) is None:
+        raise credentials_exception
+
     return get_attendance_info_for_lecture(course_id, date)
