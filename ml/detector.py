@@ -76,6 +76,3 @@ def _display_face(draw, bounding_box, name):
         name,
         fill="white",
     )
-
-
-recognize_faces("unknown.jpg")
