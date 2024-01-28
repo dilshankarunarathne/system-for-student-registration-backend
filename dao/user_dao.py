@@ -16,7 +16,10 @@ def get_all_users_info():
     return lis
 
 
-
+def get_user_info_by_id(s_id):
+    filt = {'id': s_id}
+    user = studentinfo_collection.find_one(filt)
+    return user
 
 
 if __name__ == '__main__':
