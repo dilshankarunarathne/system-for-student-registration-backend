@@ -31,7 +31,10 @@ def insert_user(username, email, password, role):
     user_collection.insert_one(user)
 
 
-
+def get_last_user_id():
+    last_user = user_collection.find().sort('id', -1).limit(1)
+    for user in last_user:
+        return user['id']
 
 
 if __name__ == '__main__':
