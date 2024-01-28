@@ -10,3 +10,8 @@ def all_student_info():
 def get_student_info_by_id(_id):
     student = get_student_info_by_id(_id)
     return student
+
+
+def get_student_info_by_uid(_u_id):
+    student = get_student_info_by_uid(_u_id)
+    return student
