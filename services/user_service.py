@@ -7,9 +7,7 @@ def add_new_user(user: User):
 
 
 def user_exists(username: str) -> bool:
-    if get_user(username) is None:
-        return False
-    return True
+    pass
 
 
 def get_next_avail_id() -> int:
