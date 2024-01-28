@@ -27,7 +27,7 @@ def query_mark_attendance(attendance_info):
     _id = _get_next_id()
     attendance_info['id'] = _id
     result = attendance_collection.insert_one(attendance_info)
-    return result.inserted_id
+    return result.inserted_id, _id
 
 
 def _get_next_id():
