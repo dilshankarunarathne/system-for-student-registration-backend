@@ -31,15 +31,7 @@ async def register_user(
             detail="Username already exists",
         )
     hashed_password = get_password_hash(password)
-    user = UserInDB(
-        id=get_next_avail_id(),
-        username=username,
-        email=email,
-        hashed_password=hashed_password,
-        is_admin=is_admin,
-    )
-    add_new_user(user)
-    return user
+    
 
 
 @router.post("/login")
