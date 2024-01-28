@@ -6,6 +6,7 @@ def add_new_user(user: User):
     # TODO: get files
     # TODO: store files
     # TODO: retrain model
+    # TODO: add user to database
     pass
 
 
