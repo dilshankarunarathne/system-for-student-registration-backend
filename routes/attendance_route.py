@@ -11,6 +11,13 @@ router = APIRouter(
 
 
 @router.post("/clear")
+async def clear_all_records(
+        token: str = Depends(oauth2_scheme)
+):
+    if get_current_user(token) is None:
+        raise credentials_exception
+
+    return clear_all_records()
 
 
 @router.post("/student")
