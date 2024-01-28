@@ -5,7 +5,7 @@ class User(BaseModel):
     id: int
     username: str | None = None
     email: str | None = None
-    is_admin: bool | None = None
+    role: str | None = None
 
 
 class UserInDB(User):
