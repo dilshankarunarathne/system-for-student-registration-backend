@@ -21,7 +21,7 @@ def blacklist_token(token):
     )
 
 
-
+def is_token_blacklisted(token):
 
 
 def _get_next_id():
