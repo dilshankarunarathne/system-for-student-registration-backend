@@ -9,11 +9,11 @@ studentinfo_collection = mydb['student']
 
 
 def get_all_students_info():
-    list = []
+    lis = []
     all_students = studentinfo_collection.find()
     for student in all_students:
-        list.append(student)
-    return list
+        lis.append(student)
+    return lis
 
 
 def get_student_info_by_id(id):
