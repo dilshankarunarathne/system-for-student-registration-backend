@@ -11,3 +11,5 @@ async def get_attendance_info_for_student(student_id):
     pass
 
 @router.post("/lecture")
+async def get_attendance_info_for_class(course_id, date):
+    pass
