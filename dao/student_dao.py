@@ -10,7 +10,6 @@ def insert_student(student_id, student_name, student_email, student_course, stud
     student = {
         'id': _id,
         'name': student_name,
-        'student_email': student_email,
         'student_course': student_course,
         'student_year': student_year,
         'student_semester': student_semester
