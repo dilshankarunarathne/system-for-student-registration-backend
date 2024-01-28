@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Form, Depends
+from fastapi import APIRouter, Form, Depends, HTTPException
 from rest_framework import status
 
 from auth.authorize import credentials_exception, oauth2_scheme, get_current_user
