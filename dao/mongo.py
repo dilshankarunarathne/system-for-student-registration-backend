@@ -16,8 +16,8 @@ def get_all_students_info():
     return lis
 
 
-def get_student_info_by_id(id):
-    filt = {'id': id}
+def get_student_info_by_id(s_id):
+    filt = {'id': s_id}
     student = studentinfo_collection.find_one(filt)
     return student
 
