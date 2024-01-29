@@ -8,9 +8,11 @@ lecturer_collection = mydb['lecturer']
 
 
 def query_lecturer_info_by_id(lid):
-    lid = int(lid)
     filt = {'id': lid}
     lecturer = lecturer_collection.find_one(filt)
+    if lecturer is None:
+        print("Lecturer not found: ", lid)
+        return None
     lecturer['_id'] = str(lecturer['_id'])
     return lecturer
 

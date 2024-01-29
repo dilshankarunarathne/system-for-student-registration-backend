@@ -29,7 +29,7 @@ async def get_all(
     return all_student_info()
 
 
-@router.get("/get-by-id")
+@router.post("/get-by-id")
 async def get_by_id(
         sid: str = Form(...),
         token: str = Depends(oauth2_scheme)

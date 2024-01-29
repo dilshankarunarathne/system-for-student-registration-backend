@@ -20,7 +20,7 @@ def query_course_by_id(_id):
     filt = {'id': _id}
     course = course_collection.find_one(filt)
     if course is None:
-        print("Course not found")
+        print("Course not found: ", _id)
         return None
     course['_id'] = str(course['_id'])
     return course

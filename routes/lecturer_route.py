@@ -9,8 +9,8 @@ router = APIRouter(
 )
 
 
-@router.get("")
+@router.post("")
 async def get_lecturer(
-        lid: str = Form(...),
+        lid: int = Form(...),
 ):
     return get_lecturer_by_id(lid)

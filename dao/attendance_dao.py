@@ -9,9 +9,12 @@ attendance_collection = mydb['attendance']
 
 def query_attendance_info_for_student(student_id):
     filt = {'student_id': student_id, 'id': {'$ne': 1}}
-    attendance = attendance_collection.find_one(filt)
-    attendance['_id'] = str(attendance['_id'])
-    return attendance
+    attendances = attendance_collection.find(filt)
+    attendances_list = []
+    for attendance in attendances:
+        attendance['_id'] = str(attendance['_id'])
+        attendances_list.append(attendance)
+    return attendances_list
 
 
 def query_attendance_info_for_class(course_id, date):

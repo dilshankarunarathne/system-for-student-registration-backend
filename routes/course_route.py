@@ -10,7 +10,7 @@ router = APIRouter(
 )
 
 
-@router.get("/get-by-id")
+@router.post("/get-by-id")
 async def get_by_id(
     cid: str = Form(...),
     token: str = Depends(oauth2_scheme)
@@ -24,14 +24,14 @@ async def get_by_id(
     return {"operation": "successful", "data": data}
 
 
-@router.get("/get-all")
+@router.post("/get-all")
 async def get_all(
-    token: str = Depends(oauth2_scheme)
+    # token: str = Depends(oauth2_scheme)
 ):
-    user = await get_current_user(token)
+    # user = await get_current_user(token)
 
-    if user is None:
-        raise credentials_exception
+    # if user is None:
+    #     raise credentials_exception
 
     data = get_all_courses()
     return {"operation": "successful", "data": data}
