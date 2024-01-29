@@ -14,5 +14,9 @@ router = APIRouter(
 async def get_all(
     token: str = Depends(oauth2_scheme)
 ):
+    user = await get_current_user(token)
+
+    if user is None:
+        raise credentials_exception
     data = get_all_courses()
     return {"operation": "successful", "data": data}
