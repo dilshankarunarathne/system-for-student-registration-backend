@@ -6,4 +6,4 @@ def get_all_courses():
 
 
 def get_course_by_id(_id):
-    query_course_by_id
+    query_course_by_id(_id)
