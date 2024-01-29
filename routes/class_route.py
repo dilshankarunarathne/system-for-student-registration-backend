@@ -13,5 +13,5 @@ def create_class():
 
 
 @router.get("")
-def get_class():
+def get_class_by_id():
     pass
