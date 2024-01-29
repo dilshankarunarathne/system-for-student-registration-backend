@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Form
 
+from services.lecturer_service import get_lecturer_by_id
+
 router = APIRouter(
     prefix="/api/lecturer",
     tags=["attendance"],
