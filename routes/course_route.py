@@ -7,4 +7,4 @@ router = APIRouter(
 )
 
 
-
+@router.get("/get-all")
