@@ -8,5 +8,7 @@ router = APIRouter(
 
 
 @router.get("")
-async def get_lecturer():
+async def get_lecturer(
+        
+):
     return {"operation": "successful", "data": "lecturer"}
