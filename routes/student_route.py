@@ -40,3 +40,7 @@ async def get_by_id(
         raise credentials_exception
 
     return student_info_by_id(sid)
+
+
+@router.get("/get-by-uid")
+
