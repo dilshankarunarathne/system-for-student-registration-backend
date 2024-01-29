@@ -9,4 +9,5 @@ router = APIRouter(
 
 @router.get("/get-all")
 async def get_all():
+    data = get_all_courses()
     return {"operation": "successful", "data": "all courses"}
