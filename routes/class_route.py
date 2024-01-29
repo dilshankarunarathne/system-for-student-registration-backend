@@ -14,6 +14,7 @@ def create_class(
         course_id: int = Form(...),
         date: str = Form(...),
         start_time: str = Form(...),
+        duration: str = Form(...),
 ):
     return add_new_class(course_id, date, start_time, duration)
 
