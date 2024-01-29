@@ -43,4 +43,13 @@ async def get_by_id(
 
 
 @router.get("/get-by-uid")
+async def get_by_uid(
+        uid: str = Form(...),
+        token: str = Depends(oauth2_scheme)
+):
+    user = await get_current_user(token)
 
+    if user is None:
+        raise credentials_exception
+
+    return student_info_by_uid(uid)
