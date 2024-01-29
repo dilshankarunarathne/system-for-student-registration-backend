@@ -5,4 +5,5 @@ def get_all_courses():
     return query_all_courses()
 
 
-
+def get_course_by_id(_id):
+    
