@@ -9,6 +9,6 @@ router = APIRouter(
 
 @router.get("")
 async def get_lecturer(
-        
+        lid: str = Form(...),
 ):
     return {"operation": "successful", "data": "lecturer"}
