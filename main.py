@@ -30,7 +30,8 @@ app.include_router(class_route.router)
 
 @app.websocket_route("/ws/register")
 async def websocket_endpoint(
-        websocket: WebSocket
+        websocket: WebSocket,
+        student_id: str,
 ):
     count = 0
     try:
