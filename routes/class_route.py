@@ -8,7 +8,9 @@ router = APIRouter(
 
 
 @router.put("")
-def create_class():
+def create_class(
+        
+):
     pass
 
 
