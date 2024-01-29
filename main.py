@@ -28,7 +28,29 @@ app.include_router(lecturer_route.router)
 app.include_router(class_route.router)
 
 
+@app.websocket_route("/ws/register")
+async def websocket_endpoint(
+        websocket: WebSocket
+):
+    try:
+        await websocket.accept()
+        while True:
+            data = await websocket.receive_text()
 
+            base64_str = re.search(r'base64,(.*)', data).group(1)
+            frame_data = base64.b64decode(base64_str)
+            nparr = np.frombuffer(frame_data, np.uint8)
+            frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+            if frame is None:
+                print("error frame is none")
+            else:
+                print("Image decoded successfully")
+            print(frame)
+            faces = recognize_faces_in_base64(frame)
+
+            await websocket.send_text(faces)
+    except Exception as e:
+        print(f"Error: {e}")
 
 
 @app.websocket_route("/ws/video")
