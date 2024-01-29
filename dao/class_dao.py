@@ -12,6 +12,7 @@ def query_class_info(course_id):
     class_info = class_collection.find_one(filt)
     if not class_info:
         return None
+    class_info['_id'] = str(class_info['_id'])
     return class_info
 
 
