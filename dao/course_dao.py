@@ -17,3 +17,10 @@ def query_all_courses():
 
 
 def query_course_by_id(_id):
+    id = int(_id)
+    filt = {'id': id}
+    course = course_collection.find_one(filt)
+    if course is None:
+        return None
+    course['_id'] = str(course['_id'])
+    return course
