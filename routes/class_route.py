@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Form, Depends, HTTPException, status
 
 from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
-from services.class_service import add_new_class
+from services.class_service import add_new_class, get_class_info
 
 router = APIRouter(
     prefix="/api/class",
