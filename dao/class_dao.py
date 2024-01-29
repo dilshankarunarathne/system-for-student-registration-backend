@@ -14,5 +14,5 @@ def insert_class_info(course_id, date, start_time, duration):
     return _id
 
 
-def get_next_id():
+def _get_next_id():
     return class_collection.count_documents({}) + 1
