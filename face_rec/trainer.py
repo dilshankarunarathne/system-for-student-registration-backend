@@ -10,7 +10,7 @@ Path("output").mkdir(exist_ok=True)
 Path("validation").mkdir(exist_ok=True)
 
 
-def train_model(
+def train_face_model(
         model: str = "hog", encodings_location: Path = DEFAULT_ENCODINGS_PATH
 ) -> None:
     names = []
