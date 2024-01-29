@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from websocket import WebSocket
 
 router = APIRouter(
     prefix="/api/video-stream",
@@ -12,4 +13,3 @@ async def websocket_endpoint(websocket: WebSocket):
     while True:
         data = await websocket.receive_bytes()
         # Handle the video stream data here
-        
