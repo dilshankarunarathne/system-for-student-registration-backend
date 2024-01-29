@@ -17,7 +17,7 @@ def create_class(
         duration: str = Form(...),
 ):
     data = add_new_class(course_id, date, start_time, duration)
-    return {"operation": "successful", "class_id": data}
+    return {"operation": "successful"}
 
 
 @router.get("")
