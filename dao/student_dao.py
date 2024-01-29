@@ -17,6 +17,8 @@ def get_all_students():
 def query_student_info_by_id(_id):
     filt = {'id': _id}
     student = student_collection.find_one(filt)
+    if student is None:
+        return None
     student['_id'] = str(student['_id'])
     return student
 
