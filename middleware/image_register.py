@@ -11,3 +11,6 @@ def store_image_model_info(class_name, student_id):
     with open("training_info.txt", "a") as f:
         f.write(f"{class_name} {student_id}\n")
     print(f"Student {class_name} {student_id} info saved successfully")
+
+
+
