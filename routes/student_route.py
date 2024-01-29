@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Form
 
 from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
 from services.student_service import all_student_info, student_info_by_id
@@ -31,7 +31,7 @@ async def get_all(
 
 @router.get("/get-by-id")
 async def get_by_id(
-        sid: str,
+        sid: str = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
     user = await get_current_user(token)
