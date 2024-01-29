@@ -13,7 +13,7 @@ def store_image_model_info(class_name, student_id):
     print(f"Student {class_name} {student_id} info saved successfully")
 
 
-def get_student_info():
+def get_student_info_by_name(class_name):
     student_info = {}
     with open("training_info.txt", "r") as f:
         for line in f:
