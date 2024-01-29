@@ -4,7 +4,7 @@ from pathlib import Path
 from collections import Counter
 from PIL import Image, ImageDraw
 
-DEFAULT_ENCODINGS_PATH = Path("output/encodings.pkl")
+DEFAULT_ENCODINGS_PATH = Path("encodings.pkl")
 
 Path("training").mkdir(exist_ok=True)
 Path("output").mkdir(exist_ok=True)
