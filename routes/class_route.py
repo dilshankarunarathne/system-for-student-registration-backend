@@ -9,7 +9,11 @@ router = APIRouter(
 
 @router.put("")
 def create_class(
-        
+        class_id: str = Form(...),
+        class_name: str = Form(...),
+        lecturer_id: str = Form(...),
+        course_id: str = Form(...),
+        student_ids: list = Form(...),
 ):
     pass
 
