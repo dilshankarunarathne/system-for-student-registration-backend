@@ -7,5 +7,6 @@ mydb = client["studentinfo"]
 class_collection = mydb['class']
 
 
-def insert_class_info():
+def insert_class_info(course_id, date, start_time, duration):
     
+
