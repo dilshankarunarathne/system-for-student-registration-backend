@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from auth.authorize import oauth2_scheme
+from auth.authorize import oauth2_scheme, get_current_user
 from services.course_service import get_all_courses
 
 router = APIRouter(
@@ -18,6 +18,6 @@ async def get_all(
 
     if user is None:
         raise credentials_exception
-    
+
     data = get_all_courses()
     return {"operation": "successful", "data": data}
