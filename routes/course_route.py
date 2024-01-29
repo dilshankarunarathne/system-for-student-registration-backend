@@ -1,5 +1,7 @@
 from fastapi import APIRouter
 
+from services.course_service import get_all_courses
+
 router = APIRouter(
     prefix="/api/course",
     tags=["course"],
