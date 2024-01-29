@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Form
 
 from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
-from services.course_service import get_all_courses
+from services.course_service import get_all_courses, get_course_by_id
 
 router = APIRouter(
     prefix="/api/course",
