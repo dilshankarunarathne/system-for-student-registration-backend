@@ -17,8 +17,8 @@ def query_all_courses():
 
 
 def query_course_by_id(_id):
-    id = int(_id)
-    filt = {'id': id}
+    cid = int(_id)
+    filt = {'id': cid}
     course = course_collection.find_one(filt)
     if course is None:
         return None
