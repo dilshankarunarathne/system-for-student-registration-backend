@@ -31,7 +31,7 @@ async def get_all(
 
 @router.get("/get-by-id")
 async def get_by_id(
-        _id: str,
+        sid: str,
         token: str = Depends(oauth2_scheme)
 ):
     user = await get_current_user(token)
@@ -39,4 +39,4 @@ async def get_by_id(
     if user is None:
         raise credentials_exception
 
-    return student_info_by_id(_id)
+    return student_info_by_id(sid)
