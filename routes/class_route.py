@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Form, Depends
 
+from auth.authorize import oauth2_scheme
 from services.class_service import add_new_class
 
 router = APIRouter(
