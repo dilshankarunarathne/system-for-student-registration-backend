@@ -12,7 +12,7 @@ router = APIRouter(
 
 @router.get("/get-by-id")
 async def get_by_id(
-    _id: str = Form(...)
+    _id: str = Form(...),
     token: str = Depends(oauth2_scheme)
 ):
     user = await get_current_user(token)
