@@ -11,4 +11,5 @@ router = APIRouter(
 async def get_lecturer(
         lid: str = Form(...),
 ):
+    data = get_lecturer_by_id(lid)
     return {"operation": "successful", "data": "lecturer"}
