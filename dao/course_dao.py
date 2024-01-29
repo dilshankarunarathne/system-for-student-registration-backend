@@ -11,4 +11,6 @@ def query_all_courses():
     courses = list(course_collection.find())
     for course in courses:
         course['_id'] = str(course['_id'])
+    if len(courses) == 0:
+        return None
     return courses
