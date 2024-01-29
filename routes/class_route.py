@@ -15,7 +15,7 @@ def create_class(
         course_id: str = Form(...),
         student_ids: list = Form(...),
 ):
-    return add_new_class(class_id, course_id, student_ids)
+    return add_new_class(course_id, date, start_time, duration)
 
 
 @router.get("")
