@@ -32,9 +32,11 @@ app.include_router(class_route.router)
 async def websocket_endpoint(
         websocket: WebSocket
 ):
+    count = 0
     try:
         await websocket.accept()
-        while True:
+        while count < 30:
+            count += 1
             data = await websocket.receive_text()
 
             base64_str = re.search(r'base64,(.*)', data).group(1)
@@ -50,7 +52,6 @@ async def websocket_endpoint(
             save_image(frame, class_name)
             store_image_model_info(class_name, student_id)
 
-            await websocket.send_text(faces)
     except Exception as e:
         print(f"Error: {e}")
 
