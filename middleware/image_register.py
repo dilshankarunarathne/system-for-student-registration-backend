@@ -16,3 +16,6 @@ def store_image_model_info(class_name, student_id):
 def get_student_info_by_name(class_name):
     student_info = {}
     with open("training_info.txt", "r") as f:
+        for line in f.readlines():
+            name, student_id = line.split()
+            student_info[name] = student_id
