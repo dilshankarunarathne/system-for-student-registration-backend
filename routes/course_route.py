@@ -10,7 +10,7 @@ router = APIRouter(
 )
 
 
-
+@router.get("/get-by-id")
 
 
 @router.get("/get-all")
