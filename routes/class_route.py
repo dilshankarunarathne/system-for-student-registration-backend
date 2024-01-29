@@ -11,8 +11,8 @@ router = APIRouter(
 
 @router.put("")
 def create_class(
-        class_id: str = Form(...),
-        course_id: str = Form(...),
+        course_id: int = Form(...),
+        : str = Form(...),
         student_ids: list = Form(...),
 ):
     return add_new_class(course_id, date, start_time, duration)
