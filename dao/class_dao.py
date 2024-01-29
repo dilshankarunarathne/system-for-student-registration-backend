@@ -8,7 +8,7 @@ class_collection = mydb['class']
 
 
 def query_class_info(course_id):
-    filt = {'course_id': course_id}
+    filt = {'class_id': course_id}
     class_info = class_collection.find_one(filt)
     if not class_info:
         return None
