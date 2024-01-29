@@ -36,7 +36,7 @@ async def create_class(
 
 @router.get("")
 async def get_class_by_id(
-        class_id: str = Form(...),
+        class_id: int = Form(...),
         token: str = Depends(oauth2_scheme)
 ):
     user = await get_current_user(token)
