@@ -7,6 +7,9 @@ mydb = client["studentinfo"]
 class_collection = mydb['class']
 
 
+def query_class_info(course_id):
+
+
 def insert_class_info(course_id, date, start_time, duration):
     _id = _get_next_id()
     class_collection.insert_one(
