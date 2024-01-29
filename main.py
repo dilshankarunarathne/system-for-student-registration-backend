@@ -28,6 +28,9 @@ app.include_router(lecturer_route.router)
 app.include_router(class_route.router)
 
 
+
+
+
 @app.websocket_route("/ws/video")
 async def websocket_endpoint(
         websocket: WebSocket
