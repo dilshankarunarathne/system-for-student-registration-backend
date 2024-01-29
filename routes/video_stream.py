@@ -1,11 +1,4 @@
-from fastapi import APIRouter
 from websocket import WebSocket
-
-router = APIRouter(
-    prefix="/api/video-stream",
-    tags=["video-stream"],
-    responses={404: {"description": "The requested url was not found"}},
-)
 
 @app.websocket("/ws/video")
 async def websocket_endpoint(websocket: WebSocket):
