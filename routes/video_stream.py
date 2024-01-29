@@ -1,4 +1,5 @@
 from websocket import WebSocket
+from main import app
 
 
 @app.websocket("/ws/video")
