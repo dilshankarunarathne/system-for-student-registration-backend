@@ -7,4 +7,4 @@ mydb = client["studentinfo"]
 course_collection = mydb['course']
 
 
-def get_all_courses():
+def query_all_courses():
