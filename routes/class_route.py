@@ -1,5 +1,7 @@
 from fastapi import APIRouter, Form
 
+from dao.class_dao import insert_class_info
+
 router = APIRouter(
     prefix="/api/class",
     tags=["class"],
