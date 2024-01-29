@@ -18,5 +18,6 @@ async def get_all(
 
     if user is None:
         raise credentials_exception
+    
     data = get_all_courses()
     return {"operation": "successful", "data": data}
