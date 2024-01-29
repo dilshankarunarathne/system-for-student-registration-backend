@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from routes import auth_route, attendance_route, student_route, course_route, lecturer_route
+from routes import auth_route, attendance_route, student_route, course_route, lecturer_route, class_route
 
 app = FastAPI()
 
