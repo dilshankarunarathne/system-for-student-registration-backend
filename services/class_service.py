@@ -1,1 +1,2 @@
-def add_new_class()
+def add_new_class():
+    
