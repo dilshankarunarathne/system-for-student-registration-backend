@@ -13,7 +13,7 @@ def create_class(
         course_id: str = Form(...),
         student_ids: list = Form(...),
 ):
-    pass
+    return 
 
 
 @router.get("")
