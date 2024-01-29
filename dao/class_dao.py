@@ -8,5 +8,8 @@ class_collection = mydb['class']
 
 
 def insert_class_info(course_id, date, start_time, duration):
-    
 
+
+
+def get_next_id():
+    return class_collection.count_documents({}) + 1
