@@ -11,6 +11,17 @@ router = APIRouter(
 
 
 @router.get("/get-by-id")
+async def get_by_id(
+    _id: str,
+    token: str = Depends(oauth2_scheme)
+):
+    user = await get_current_user(token)
+
+    if user is None:
+        raise credentials_exception
+
+    data = get_course_by_id(_id)
+    return {"operation": "successful", "data": data}
 
 
 @router.get("/get-all")
