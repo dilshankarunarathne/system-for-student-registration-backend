@@ -29,6 +29,8 @@ def query_student_info_by_uid(_u_id):
     filt = {'u_id': uid}
     student = student_collection.find_one(filt)
     student['_id'] = str(student['_id'])
+    if student is None:
+        return None
     return student
 
 
