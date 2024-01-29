@@ -35,7 +35,7 @@ async def create_class(
 
 
 @router.get("")
-def get_class_by_id(
+async def get_class_by_id(
         class_id: str = Form(...),
 ):
     pass
