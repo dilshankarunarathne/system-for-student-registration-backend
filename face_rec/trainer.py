@@ -1,3 +1,4 @@
+import os.path
 from pathlib import Path
 import pickle
 import face_recognition
@@ -14,6 +15,7 @@ def encode_known_faces(
 ) -> None:
     names = []
     encodings = []
+    assert os.path.exists('training')
     for filepath in Path("training").glob("*/*"):
         name = filepath.parent.name
         image = face_recognition.load_image_file(filepath)
