@@ -1,4 +1,6 @@
 from websocket import WebSocket
+
+from face_recognition.detector import recognize_faces_in_base64
 from main import app
 
 
@@ -7,4 +9,4 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     while True:
         data = await websocket.receive_bytes()
-        # Handle the video stream data here
+        faces = recognize_faces_in_base64(data)
