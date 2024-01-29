@@ -11,7 +11,7 @@ router = APIRouter(
 
 
 @router.put("")
-def create_class(
+async def create_class(
         course_id: int = Form(...),
         date: str = Form(...),
         start_time: str = Form(...),
