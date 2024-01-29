@@ -10,6 +10,10 @@ router = APIRouter(
 )
 
 
+# TODO get last class info
+# TODO edit course info
+
+
 @router.put("")
 async def create_class(
         course_id: int = Form(...),
