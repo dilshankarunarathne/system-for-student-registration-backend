@@ -1,6 +1,6 @@
 from websocket import WebSocket
 
-from face_recognition.detector import recognize_faces_in_base64
+from face_rec.detector import recognize_faces_in_base64
 from main import app
 
 
