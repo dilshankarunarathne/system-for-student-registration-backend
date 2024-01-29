@@ -38,4 +38,4 @@ async def create_class(
 async def get_class_by_id(
         class_id: str = Form(...),
 ):
-    pass
+    return get_class_info(class_id)
