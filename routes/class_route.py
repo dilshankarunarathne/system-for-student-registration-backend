@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Form
+from fastapi import APIRouter, Form, Depends
 
 from services.class_service import add_new_class
 
@@ -28,7 +28,7 @@ def create_class(
             detail="Only lecturers can clear attendance records",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    
+
     data = add_new_class(course_id, date, start_time, duration)
     return {"message": "operation successful"}
 
