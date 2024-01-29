@@ -8,3 +8,7 @@ course_collection = mydb['course']
 
 
 def query_all_courses():
+    courses = list(course_collection.find())
+    for course in courses:
+        course['_id'] = str(course['_id'])
+    return courses
