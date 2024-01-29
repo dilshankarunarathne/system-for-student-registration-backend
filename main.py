@@ -10,6 +10,7 @@ from starlette.websockets import WebSocket
 from face_rec.detector import recognize_faces_in_base64
 from middleware.image_register import save_image
 from routes import auth_route, attendance_route, student_route, course_route, lecturer_route, class_route
+from services.student_service import student_info_by_uid
 
 app = FastAPI()
 
