@@ -13,3 +13,5 @@ def create_class():
 
 
 @router.get("")
+def get_class():
+    pass
