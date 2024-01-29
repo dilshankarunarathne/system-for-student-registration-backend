@@ -10,6 +10,7 @@ lecturer_collection = mydb['lecturer']
 def get_lecturer_info_by_uid(_u_id):
     filt = {'u_id': _u_id}
     lecturer = lecturer_collection.find_one(filt)
+    lecturer['_id'] = str(lecturer['_id'])
     return lecturer
 
 
