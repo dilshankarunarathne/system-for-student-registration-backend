@@ -14,7 +14,39 @@ BOUNDING_BOX_COLOR = "blue"
 TEXT_COLOR = "white"
 
 
+import base64
+import numpy as np
+import cv2
 
+def recognize_faces_in_base64(
+        base64_image: str,
+        model: str = "hog",
+        encodings_location: Path = DEFAULT_ENCODINGS_PATH,
+) -> str:
+    # Decode the base64 image
+    image_data = base64.b64decode(base64_image)
+    nparr = np.frombuffer(image_data, np.uint8)
+    input_image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+    # Convert the image from BGR color (which OpenCV uses) to RGB color
+    rgb_image = cv2.cvtColor(input_image, cv2.COLOR_BGR2RGB)
+
+    # Find the face locations and encodings in the image
+    input_face_locations = face_recognition.face_locations(rgb_image, model=model)
+    input_face_encodings = face_recognition.face_encodings(rgb_image, input_face_locations)
+
+    # Load the known face encodings
+    with encodings_location.open(mode="rb") as f:
+        loaded_encodings = pickle.load(f)
+
+    # Recognize the faces in the image
+    for unknown_encoding in input_face_encodings:
+        name = _recognize_face(unknown_encoding, loaded_encodings)
+        if not name:
+            name = "Unknown"
+        return name
+
+    return None
 
 
 def recognize_faces(
