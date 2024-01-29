@@ -25,7 +25,8 @@ def query_student_info_by_id(_id):
 
 
 def query_student_info_by_uid(_u_id):
-    filt = {'u_id': _u_id}
+    uid = int(_u_id)
+    filt = {'u_id': uid}
     student = student_collection.find_one(filt)
     student['_id'] = str(student['_id'])
     return student
