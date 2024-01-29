@@ -13,10 +13,6 @@ Path("validation").mkdir(exist_ok=True)
 BOUNDING_BOX_COLOR = "blue"
 TEXT_COLOR = "white"
 
-import base64
-import numpy as np
-import cv2
-
 
 def recognize_faces_in_base64(
         base64_image: str,
