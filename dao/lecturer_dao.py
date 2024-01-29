@@ -7,8 +7,9 @@ mydb = client["studentinfo"]
 lecturer_collection = mydb['lecturer']
 
 
-def query_lecturer_info_by_id(id):
-    filt = {'id': id}
+def query_lecturer_info_by_id(lid):
+    lid = int(lid)
+    filt = {'id': lid}
     lecturer = lecturer_collection.find_one(filt)
     lecturer['_id'] = str(lecturer['_id'])
     return lecturer
