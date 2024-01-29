@@ -5,3 +5,6 @@ router = APIRouter(
     tags=["course"],
     responses={404: {"description": "The requested url was not found"}},
 )
+
+
+
