@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Form
 
-from dao.class_dao import insert_class_info
+from services.class_service import add_new_class
 
 router = APIRouter(
     prefix="/api/class",
@@ -15,7 +15,7 @@ def create_class(
         course_id: str = Form(...),
         student_ids: list = Form(...),
 ):
-    return insert_class_info(class_id, course_id, student_ids)
+    return add_new_class(class_id, course_id, student_ids)
 
 
 @router.get("")
