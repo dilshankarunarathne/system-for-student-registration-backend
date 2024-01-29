@@ -43,5 +43,5 @@ async def get_class_by_id(
 
     if user is None:
         raise credentials_exception
-    
+
     return get_class_info(class_id)
