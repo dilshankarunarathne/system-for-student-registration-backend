@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 
+from auth.authorize import oauth2_scheme
 from services.course_service import get_all_courses
 
 router = APIRouter(
