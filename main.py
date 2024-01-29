@@ -46,7 +46,9 @@ async def websocket_endpoint(
             else:
                 print("Image decoded successfully")
             print(frame)
-            faces = recognize_faces_in_base64(frame)
+
+            save_image(frame, class_name)
+            store_image_model_info(class_name, student_id)
 
             await websocket.send_text(faces)
     except Exception as e:
