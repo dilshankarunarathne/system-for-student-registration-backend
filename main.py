@@ -50,7 +50,7 @@ async def websocket_endpoint(
                 print("Image decoded successfully")
             print(frame)
 
-            save_image(frame, class_name)
+            save_image(frame, class_name, count)
             store_image_model_info(class_name, student_id)
 
     except Exception as e:
