@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Form
 
 from auth.authorize import oauth2_scheme, get_current_user, credentials_exception
-from services.student_service import all_student_info, student_info_by_id
+from services.student_service import all_student_info, student_info_by_id, student_info_by_uid
 
 router = APIRouter(
     prefix="/api/student",
