@@ -14,3 +14,6 @@ def query_all_courses():
     if len(courses) == 0:
         return None
     return courses
+
+
+def query_course_by_id(_id):
