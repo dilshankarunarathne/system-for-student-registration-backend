@@ -15,6 +15,7 @@ def create_class(
         date: str = Form(...),
         start_time: str = Form(...),
         duration: str = Form(...),
+        token: str = Depends(oauth2_scheme)
 ):
     data = add_new_class(course_id, date, start_time, duration)
     return {"message": "operation successful"}
