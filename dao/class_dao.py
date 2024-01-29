@@ -7,6 +7,5 @@ mydb = client["studentinfo"]
 class_collection = mydb['class']
 
 
-def insert_class_info(class_info):
-    result = class_collection.insert_one(class_info)
-    return result.inserted_id
+def insert_class_info():
+    
