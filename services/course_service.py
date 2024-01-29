@@ -1,4 +1,4 @@
-from dao.course_dao import query_all_courses
+from dao.course_dao import query_all_courses, query_course_by_id
 
 
 def get_all_courses():
