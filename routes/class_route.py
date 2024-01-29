@@ -13,7 +13,7 @@ router = APIRouter(
 def create_class(
         course_id: int = Form(...),
         date: str = Form(...),
-        student_ids: list = Form(...),
+        start_time: str = Form(...),
 ):
     return add_new_class(course_id, date, start_time, duration)
 
