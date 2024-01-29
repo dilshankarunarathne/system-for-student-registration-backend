@@ -19,3 +19,4 @@ def get_student_info_by_name(class_name):
         for line in f.readlines():
             name, student_id = line.split()
             student_info[name] = student_id
+    return student_info[class_name]
