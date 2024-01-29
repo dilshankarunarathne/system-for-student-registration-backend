@@ -8,7 +8,10 @@ class_collection = mydb['class']
 
 
 def insert_class_info(course_id, date, start_time, duration):
-
+    _id = _get_next_id()
+    class_collection.insert_one({"id": _id, "course_id": course_id, "date": date, "start_time": start_time,
+                                 "duration": duration})
+    return _id
 
 
 def get_next_id():
