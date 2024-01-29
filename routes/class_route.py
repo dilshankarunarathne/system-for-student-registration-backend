@@ -37,5 +37,6 @@ async def create_class(
 @router.get("")
 async def get_class_by_id(
         class_id: str = Form(...),
+token: str = Depends(oauth2_scheme)
 ):
     return get_class_info(class_id)
